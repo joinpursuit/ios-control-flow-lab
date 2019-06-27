@@ -124,6 +124,7 @@ let firstName = "John"
 let lastName = "Appleseed"
 
 var fullName = firstName + " " + lastName
+print(fullName)
 ```
 
 ***
