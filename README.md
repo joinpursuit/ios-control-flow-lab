@@ -123,7 +123,7 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 let firstName = "John"
 let lastName = "Appleseed"
 
-print(firstName + " " + lastName)
+var fullName = firstName + " " + lastName
 ```
 
 ***
