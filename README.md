@@ -193,8 +193,6 @@ default:
     }
 ```
 
-```
-
 ***
 
 ## Question 8
@@ -279,6 +277,8 @@ Numeric Score 	Letter Grade
 Below 65 	F
 ```
 ```
+//Answer: 
+
 var numGrade = 99
 
 switch numGrade{
@@ -316,7 +316,7 @@ let fullName = firstName + " " + lastName
 ```
 
 ```
-Answer:
+// Answer:
 I think the error is a result of the lastName not being declared and assigned a value prior to the if/else statment. 
 let firstName = "Peter"
 var lastName = "lastname"
@@ -460,11 +460,15 @@ let myTuple: (Int, Int) = (5, 10)
 ```
 
 ```
+// if statment:
+
 if myTuple.0 + myTuple.1 == 15 {
     print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is 15")
 } else {
     print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is not 15")
 }
+
+// switch:
 
 var sum = myTuple.0 + myTuple.1
 
