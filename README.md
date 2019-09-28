@@ -28,10 +28,10 @@ if conditionTwo {
 print("D")
 ```
 
-- A
+- A -prints
 - B
-- C
-- D
+- C -prints
+- D -prints
 
 ***
 ## Question 2
