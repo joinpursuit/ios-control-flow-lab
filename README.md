@@ -26,12 +26,16 @@ if conditionTwo {
  print("C")
 }
 print("D")
+
 ```
 
 - A
 - B
 - C
 - D
+```
+// Answer: A & C
+```
 
 ***
 ## Question 2
@@ -55,6 +59,11 @@ switch appInfo {
 - Thanks for looking at myCoolApp!
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
+
+```
+// Answer: myCoolApp hasn't released yet 
+```
+
 
 ***
 ## Question 3
@@ -80,6 +89,9 @@ default:
 - C
 - D
 
+```
+// Answer: D 
+``` 
 ***
 ## Question 4
 
@@ -103,6 +115,9 @@ case "snickers":
 - No default case in the switch statement
 - No print statement right outside the switch statement
 
+```
+// Answer: No default case in the switch statement
+```
 ***
 ## Question 5
 
@@ -113,6 +128,21 @@ let currentWeather = "rain"
 
 // enter code below
 ```
+```
+Answer:
+switch currentWeather {
+case "rain":
+    print("It is raining")
+case "snow":
+    print("It is snowing")
+case "sunny":
+    print("It is sunny")
+default:
+    break
+}
+
+```
+
 
 ***
 ## Question 6
@@ -126,6 +156,14 @@ let lastName = "Appleseed"
 // enter code below
 ```
 
+```
+// Answer:
+
+let firstName = "John"
+let lastName = "Appleseed"
+
+print("The Fellow's full name is \(firstName) \(lastName)")
+```
 ***
 
 ## Question 7
