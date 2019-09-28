@@ -178,8 +178,20 @@ if temperatureInFahrenheit <= 40 {
 } else {
  print("Weather is moderate.")
 }
+```
 
-//Re-written statement here
+```
+// Re-written statement here:
+
+switch  temperatureInFahrenheit{
+case ...40:
+    print("It's cold out.")
+case 85...:
+    print("It's really warm.")
+default:
+    print("Weather is moderate.")
+    }
+```
 
 ```
 
@@ -190,12 +202,15 @@ if temperatureInFahrenheit <= 40 {
 Complete the following code so that "You win!" is printed.
 
 ```swift
-if {
+var winningAnswer = 8
+var yourAnswer = 8
+
+if winningAnswer == yourAnswer {
  print("You win!")
-} 
-else {
+} else {
  print("You lose!")
 }
+
 ```
 ***
 
@@ -223,6 +238,31 @@ Output:
 Error
 
 ```
+```
+//Answer:
+
+switch numberOfSides {
+case 3:
+    print("Triangle")
+case 4:
+    print("Square")
+case 5:
+    print("Pentagon")
+case 6:
+    print("Hexagon")
+case 7:
+    print("Heptagon")
+case 8:
+    print("Octagon")
+case 9:
+    print("Nonagon")
+case 10:
+    print("Decagon")
+default:
+    print("Error: Out of Range ")
+}
+
+```
 ***
 
 ## Question 10
@@ -237,6 +277,26 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+```
+```
+var numGrade = 99
+
+switch numGrade{
+case 100:
+    print("Letter Grade: A+")
+case 90...99:
+    print("Letter Grade: A")
+case 80...89:
+    print("Letter Grade: A")
+case 70...79:
+    print("Letter Grade: C")
+case 65...69:
+    print("Letter Grade: D")
+case ...65:
+    print("Letter Grade: F")
+default:
+    break
+}
 ```
 ***
 
@@ -254,6 +314,22 @@ if firstName == "Peter" {
 }
 let fullName = firstName + " " + lastName
 ```
+
+```
+Answer:
+I think the error is a result of the lastName not being declared and assigned a value prior to the if/else statment. 
+let firstName = "Peter"
+var lastName = "lastname"
+
+
+if firstName == "Peter" {
+ lastName = "Gabriel"
+} else if firstName == "Phil" {
+ lastName = "Collins"
+}
+
+let fullName = firstName + " " + lastName
+```
 ***
 
 ## Question 12
@@ -263,6 +339,37 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 ```swift
 let nameAndBirthYear: (String, Int)
 
+```
+```
+//Answer:
+
+// if statment 
+
+if 0 < nameAndBirthYear.1 && nameAndBirthYear.1 < 11 {
+    print("You are in your first decade.")
+}
+if 11 <= nameAndBirthYear.1 && nameAndBirthYear.1 < 20 {
+    print("You are in your teens.")
+}
+if 20 <= nameAndBirthYear.1 && nameAndBirthYear.1 < 30 {
+    print("You are in your twenties.")
+}
+if nameAndBirthYear.1 > 29 {
+    print("Your are in your thirties or above")
+}
+
+//Switch statement:
+
+switch nameAndBirthYear.1{
+case 1...10:
+    print("You are in your first decade.")
+case 11..<20:
+    print("You are in your teens.")
+case 20..<30:
+    print("You are in your twemties.")
+default:
+    print("Your are in your thirties or above")
+}
 ```
 ***
 
@@ -288,13 +395,14 @@ default:
 ```
 What happens when you change number to:
 
--a. 365?
+-a. 365? // "Days in year" is printed
 
--b. 1024?
+-b. 1024? // "Bytes in a Kilobyte" is printed 
 
--c. 65?
+-c. 65? // "Some uninteresting number" is printed
 
-What happens when you remove the default clause?
+What happens when you remove the default clause? // code will not complie, error msg: "Switch must be exhaustive"
+
 
 ***
 
@@ -313,8 +421,28 @@ c. Convert your final if-else statement to a switch statement.
 var population: Int = 10000
 var message = String()
 
+// if/else statment 
+
 if population > 10000 {
  message = "\(population) is a large town"
+} else if population < 10_000 && population > 5000 {
+    message = "\(population) is a medium town"
+} else {
+    message = "\(population) is a mid-size town"
+}
+
+// switch:
+
+switch population {
+case 10_001...:
+    message = "\(population) is a large town"
+case 5001..<10_000:
+    message = "\(population) is a medium town"
+case 10_000:
+    message = "\(population) is a mid-size town"
+default:
+    break
+    
 }
 ```
 ***
@@ -329,5 +457,22 @@ b. Using a switch statement
 
 ```swift
 let myTuple: (Int, Int) = (5, 10)
+```
+
+```
+if myTuple.0 + myTuple.1 == 15 {
+    print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is 15")
+} else {
+    print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is not 15")
+}
+
+var sum = myTuple.0 + myTuple.1
+
+switch sum {
+case 15:
+    print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is 15")
+default:
+    print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is not 15")
+}
 ```
 ***
