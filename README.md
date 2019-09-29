@@ -28,10 +28,15 @@ if conditionTwo {
 print("D")
 ```
 
-- A
+- A 
 - B
 - C
 - D
+# Answer - this code will print:
+
+## A
+## C
+## D
 
 ***
 ## Question 2
@@ -55,6 +60,9 @@ switch appInfo {
 - Thanks for looking at myCoolApp!
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
+
+# Answer
+## myCoolApp hasn't released yet
 
 ***
 ## Question 3
@@ -80,6 +88,9 @@ default:
 - C
 - D
 
+# Answer
+## D
+
 ***
 ## Question 4
 
@@ -97,10 +108,10 @@ case "snickers":
  print("Hungry? Grab a Snickers")
 }
 ```
-
+# Answer 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
-- No default case in the switch statement
+## - No default case in the switch statement
 - No print statement right outside the switch statement
 
 ***
@@ -113,6 +124,21 @@ let currentWeather = "rain"
 
 // enter code below
 ```
+# Answer
+```swift
+let currentWeather = "rain"
+
+switch currentWeather {
+case "rain":
+ print("Get your umbrella!")
+case "sunny":
+ print("Take your sunglasses!")
+case "snow":
+ print("Break out your ski gear!")
+default:
+    print("Typical meteorologist, weather is unknown!")
+}
+```
 
 ***
 ## Question 6
@@ -124,6 +150,15 @@ let firstName = "John"
 let lastName = "Appleseed"
 
 // enter code below
+```
+
+# Answer
+```swift
+let firstName = "John"
+let lastName = "Appleseed"
+
+var fullName: String = firstName + " " + lastName
+print("Fellow's full name is \(fullName)")
 ```
 
 ***
@@ -144,6 +179,18 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+# Answer
+
+```swift
+switch temperatureInFahrenheit {
+case ..<40:
+     print("It's cold out.")
+case 85...:
+     print("It's really warm.")
+default:
+     print("Weather is moderate.")
+}
+```
 
 ***
 
@@ -153,6 +200,15 @@ Complete the following code so that "You win!" is printed.
 
 ```swift
 if {
+ print("You win!")
+} 
+else {
+ print("You lose!")
+}
+```
+# Answer
+```swift
+if true {
  print("You win!")
 } 
 else {
