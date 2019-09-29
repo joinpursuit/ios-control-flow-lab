@@ -79,6 +79,10 @@ default:
 - B
 - C
 - D
+```
+Answer
+```
+-D : "0..<4" does not include 4, but only up to 3.99, the next case starts at 5."
 
 ***
 ## Question 4
@@ -102,7 +106,12 @@ case "snickers":
 - No opening and closing brackets in each of the cases
 - No default case in the switch statement
 - No print statement right outside the switch statement
-
+```
+```
+Answer
+```
+No default case in the switch statement
+```
 ***
 ## Question 5
 
@@ -111,9 +120,23 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
-// enter code below
-```
 
+```
+Answer
+```swift
+let currentWeather = "rain"
+
+switch currentWeather {
+case "rain":
+    print("It is going to \(currentWeather)")
+case "sunny":
+    print("It is going to be \(currentWeather)")
+case "snow":
+    print("Oh no! It is going \(currentWeather)")
+default:
+    print("Take a look through the window and tell me how the weather is please 😁")
+}
+```
 ***
 ## Question 6
 
@@ -124,6 +147,15 @@ let firstName = "John"
 let lastName = "Appleseed"
 
 // enter code below
+```
+Answer
+```swift
+let firstName = "Johnathan "
+let lastName = "Appleseed"
+
+var fullName = firstName + lastName
+
+print("The fellows full name is \(fullName)")
 ```
 
 ***
@@ -144,7 +176,19 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+Answer
+```swift
+var tempInFahrenheit = 40
 
+switch tempInFahrenheit {
+case 0..<40:
+    print("It's cold out")
+case 85..<100:
+    print("It's really warm.")
+default:
+    print("Weather is moderate.")
+}
+```
 ***
 
 ## Question 8
@@ -157,6 +201,17 @@ if {
 } 
 else {
  print("You lose!")
+}
+```
+Answer
+```swift
+
+var xx = 50
+
+if xx == 50 {
+    print("You win!")
+} else {
+print("You lose!")
 }
 ```
 ***
