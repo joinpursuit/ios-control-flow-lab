@@ -56,6 +56,12 @@ switch appInfo {
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
 
+
+Answer
+```
+- myCoolApp hasn't released yet
+```
+
 ***
 ## Question 3
 
@@ -79,10 +85,11 @@ default:
 - B
 - C
 - D
-```
+
 Answer
 ```
 -D : "0..<4" does not include 4, but only up to 3.99, the next case starts at 5."
+```
 
 ***
 ## Question 4
@@ -240,6 +247,31 @@ Output:
 Error
 
 ```
+Answer
+```swift
+var numberOfSides = 9
+
+switch numberOfSides {
+case 3:
+    print("Triangle")
+case 4:
+    print("Square")
+case 5:
+    print("Pentagon")
+case 6:
+    print("Hexagon")
+case 7:
+    print("Heptagon")
+case 8:
+    print("Octagon")
+case 9:
+    print("Nonagon")
+case 10:
+    print("Decagon")
+default:
+    print("Error")
+}
+```
 ***
 
 ## Question 10
@@ -254,6 +286,25 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+```
+Answer
+```swift
+var myGrade = 66
+
+switch myGrade {
+case 100:
+    print("A+")
+case 90...99:
+    print("A")
+case 80...89:
+    print("B")
+case 70...79:
+    print("C")
+case 65...69:
+    print("D")
+default:
+    print("F")
+}
 ```
 ***
 
@@ -270,6 +321,9 @@ if firstName == "Peter" {
  let lastName = "Collins"
 }
 let fullName = firstName + " " + lastName
+```
+Answer
+```swift
 ```
 ***
 
