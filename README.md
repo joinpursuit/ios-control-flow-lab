@@ -27,9 +27,8 @@ if conditionTwo {
 }
 print("D")
 ```
-
+Answer:
 - A
-- B
 - C
 - D
 
@@ -49,12 +48,9 @@ switch appInfo {
  print("I'm not quite sure what you are looking at")
 }
 ```
+Answer:
 
-- appInfo.0 hasn't released yet
 - myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
-- I'm not quite sure what you are looking at
-- It will give a compile-time error
 
 ***
 ## Question 3
@@ -75,9 +71,7 @@ default:
 }
 ```
 
-- A
-- B
-- C
+Answer:
 - D
 
 ***
@@ -97,11 +91,11 @@ case "snickers":
  print("Hungry? Grab a Snickers")
 }
 ```
+Answer:
 
 - No parentheses around the conditions
-- No opening and closing brackets in each of the cases
 - No default case in the switch statement
-- No print statement right outside the switch statement
+
 
 ***
 ## Question 5
@@ -114,6 +108,16 @@ let currentWeather = "rain"
 // enter code below
 ```
 
+switch currentWeather {
+case ("rain"):
+print("Take an umbrella!")
+case("sunny"):
+print("Go to the beach!")
+case("snow"):
+print("Take out your coat!")
+default:
+print("Stay home!")
+}
 ***
 ## Question 6
 
@@ -125,7 +129,13 @@ let lastName = "Appleseed"
 
 // enter code below
 ```
-
+Answer:
+var fullName = firstName + lastName
+if fullName == "John" + "Appleseed" {
+print(fullName)
+} else {
+print("Not here.")
+}
 ***
 
 ## Question 7
@@ -144,7 +154,17 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+Answer:
+let temp = 46
 
+switch temp {
+case(0...40):
+print("It's cold out.")
+case(41...85):
+print("It's really warm.")
+default:
+print("Weather is moderate.")
+}
 ***
 
 ## Question 8
@@ -159,6 +179,14 @@ else {
  print("You lose!")
 }
 ```
+Answer:
+var win = 100
+if win == 100 {
+ print("You win!")
+} 
+else {
+ print("You lose!")
+}
 ***
 
 ## Question 9
@@ -185,6 +213,27 @@ Output:
 Error
 
 ```
+Answer:
+switch numberOfSides {
+case(3):
+print("Triangel")
+case(4):
+print("Square")
+case(5):
+print("Pentagon")
+case(6):
+print("Hexagon")
+case(7):
+print("Heptagon")
+case(8):
+print("Octagon")
+case(9):
+print("Enneagon")
+case(10):
+print("Decagon")
+default:
+print("error")
+} 
 ***
 
 ## Question 10
@@ -200,6 +249,23 @@ Numeric Score 	Letter Grade
 65 - 69 	D
 Below 65 	F
 ```
+Answer:
+
+var score = 79
+switch score {
+case(100):
+print("A+")
+case(90...99):
+print("A")
+case(80...89):
+print("B")
+case(70...79):
+print("C")
+case(65...69):
+print("D")
+default:
+print("F")
+}
 ***
 
 ## Question 11
@@ -216,6 +282,15 @@ if firstName == "Peter" {
 }
 let fullName = firstName + " " + lastName
 ```
+Answer:
+var firstNames = "Phil"
+var lastNames = "Gabriel"
+
+if firstNames == "Peter" {
+ print("\(firstNames) Gabriel")
+} else if firstNames == "Phil" {
+ print("\(firstNames) Collins")
+}
 ***
 
 ## Question 12
@@ -225,6 +300,21 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 ```swift
 let nameAndBirthYear: (String, Int)
 
+```
+Answer:
+```
+swift
+var nameAndBirthYear = ("_", 25)
+switch nameAndBirthYear {
+case("_", 11...19):
+print("You are in your teens.")
+case("_", 20...29):
+print("You are in your twenties.")
+case("_", 30...39):
+print("You are in your thirties.")
+default:
+print("You are older than thirties.")
+}
 ```
 ***
 
@@ -248,16 +338,28 @@ case 42:
 default:
  print("Some uninteresting number")
 ```
+Answer
+```
+The answer to life, the universe and everything
+```
 What happens when you change number to:
 
 -a. 365?
-
+```
+Answer: Days in year
+```
 -b. 1024?
-
+```
+Answer: Bytes in a Kilobyte
+```
 -c. 65?
-
+```
+Answer: Some uninteresting number
+```
 What happens when you remove the default clause?
-
+```
+Answer: the code won't run
+```
 ***
 
 
