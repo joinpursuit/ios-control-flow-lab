@@ -32,7 +32,11 @@ print("D")
 - B
 - C
 - D
-
+_________________________________
+Answer:
+A
+C
+D
 ***
 ## Question 2
 
@@ -55,6 +59,11 @@ switch appInfo {
 - Thanks for looking at myCoolApp!
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
+
+________________________________________
+Answer:
+- myCoolApp hasn't released yet
+- Thanks for looking at myCoolApp!
 
 ***
 ## Question 3
@@ -79,6 +88,9 @@ default:
 - B
 - C
 - D
+___________________________
+Answer:
+D
 
 ***
 ## Question 4
@@ -102,6 +114,9 @@ case "snickers":
 - No opening and closing brackets in each of the cases
 - No default case in the switch statement
 - No print statement right outside the switch statement
+_________________________________________________
+Answer:
+- No default case in the switch statement
 
 ***
 ## Question 5
@@ -112,6 +127,20 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 let currentWeather = "rain"
 
 // enter code below
+______________________________
+Answer:
+let currentWeather = "rain"
+
+switch currentWeather {
+case "rain":
+print("It's raining today")
+case "sun":
+print("It's sunny today")
+case "snow":
+print("It is snowing today")
+default:
+print("Hope the weather will be great today")
+}
 ```
 
 ***
@@ -124,7 +153,14 @@ let firstName = "John"
 let lastName = "Appleseed"
 
 // enter code below
-```
+__________________________________
+Answer:
+let firstName = "John"
+let lastName = "Appleseed"
+
+var fullName = firstName + " " + lastName
+
+print("Fellow's full name is \(fullName).")
 
 ***
 
@@ -142,6 +178,16 @@ if temperatureInFahrenheit <= 40 {
 }
 
 //Re-written statement here
+_______________________________
+Answer:
+switch temperatureInFahrenheit {
+case 0...40:
+    print("It's cold out.")
+case 85...150:
+    print("It's really warm.")
+default:
+    print("Weather is moderate.")
+}
 
 ```
 
@@ -158,6 +204,17 @@ if {
 else {
  print("You lose!")
 }
+_____________________
+Answer:
+let yourScore = 100
+
+if yourScore >= 100 {
+ print("You win!")
+}
+else {
+ print("You lose!")
+}
+// Output "You win!"
 ```
 ***
 
@@ -184,6 +241,63 @@ var numberOfSides = 2
 Output:
 Error
 
+__________________________
+Answer:
+Example 1:
+var numberOfSides = 6
+
+switch numberOfSides {
+case 3:
+    print("Triangle")
+case 4:
+    print("Square")
+case 5:
+    print("Pentagon")
+case 6:
+    print("Hexagon")
+case 7:
+    print("Heptagon")
+case 8:
+    print("Octagon")
+case 9:
+    print("Nonagon")
+case 10:
+    print("Decagon")
+case 0..<3:
+    print("Error")
+default:
+    print("Error")
+}
+// Output "Hexagon"
+
+Example 2:
+var numberOfSides = 2
+
+switch numberOfSides {
+case 3:
+    print("Triangle")
+case 4:
+    print("Square")
+case 5:
+    print("Pentagon")
+case 6:
+    print("Hexagon")
+case 7:
+    print("Heptagon")
+case 8:
+    print("Octagon")
+case 9:
+    print("Nonagon")
+case 10:
+    print("Decagon")
+case 0..<3:
+    print("Error")
+default:
+    print("Error")
+}
+// Output "Error"
+"
+
 ```
 ***
 
@@ -199,6 +313,28 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+
+_____________________________
+Answer:
+let numericScore = 100
+
+switch numericScore {
+case 100...100:
+    print("Grade A+")
+case 90...99:
+    print("Grade A")
+case 80...89:
+    print("Grade B")
+case 70...79:
+    print("Grade C")
+case 65...69:
+    print("Grade D")
+case 0..<65:
+    print("Grade F")
+default:
+    print("Error in score calculation")
+}
+// Output "Grade A+"
 ```
 ***
 
@@ -216,6 +352,22 @@ if firstName == "Peter" {
 }
 let fullName = firstName + " " + lastName
 ```
+___________________________________________
+Answer:
+The second line of code declares a constant (inside the code). That is not acceptable.
+There are a lot of ways how to rewrite the code. I would rewrite it like that:
+
+let firstName = "Peter"
+
+if firstName == "Peter" {
+ print("Gabriel")
+} else if firstName == "Phil" {
+  print("Collins")
+} else {
+    print("Unknown lastname")
+}
+// Output "Gabriel"
+
 ***
 
 ## Question 12
@@ -247,6 +399,7 @@ case 42:
  print("The answer to life, the universe and everything")
 default:
  print("Some uninteresting number")
+ }
 ```
 What happens when you change number to:
 
@@ -257,6 +410,17 @@ What happens when you change number to:
 -c. 65?
 
 What happens when you remove the default clause?
+______________________________________________
+Answer:
+Currently system will print "The answer to life, the universe and everything".
+
+With let number = 365 will print "Days in year".
+
+With let number = 1024 will print "Bytes in a Kilobyte".
+
+With let number - 65 will print "Some interesting number".
+
+If to remove the default clause we will get error "Switch must be exhaustive"
 
 ***
 
