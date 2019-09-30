@@ -28,10 +28,10 @@ if conditionTwo {
 print("D")
 ```
 
-- A
+- A 
 - B
-- C
-- D
+- C (will print)
+- D (will print)
 
 ***
 ## Question 2
@@ -48,11 +48,12 @@ switch appInfo {
  default:
  print("I'm not quite sure what you are looking at")
 }
+
 ```
 
 - appInfo.0 hasn't released yet
-- myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
+- myCoolApp hasn't released yet (will print)
+- Thanks for looking at myCoolApp! (will print)
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
 
@@ -76,7 +77,7 @@ default:
 ```
 
 - A
-- B
+- B (will print)
 - C
 - D
 
@@ -100,7 +101,7 @@ case "snickers":
 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
-- No default case in the switch statement
+- No default case in the switch statement (answer)
 - No print statement right outside the switch statement
 
 ***
@@ -112,6 +113,20 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 let currentWeather = "rain"
 
 // enter code below
+Answer:
+
+let currentWeather = "rain"
+switch currentWeather {
+case "rain":
+ print("Better pack an umbrella")
+case "sunny":
+ print("Might wanna pack a pair of sunglasses")
+case snow:
+ print("Get ready to shovel")
+default:
+print("It's a beautiful day!")
+}
+
 ```
 
 ***
@@ -156,6 +171,16 @@ if {
  print("You win!")
 } 
 else {
+ print("You lose!")
+}
+
+//Answer:
+
+var score = 75
+if score >= 50 {
+ print("You win!")
+}
+else {score <= 50
  print("You lose!")
 }
 ```
