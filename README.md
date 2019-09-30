@@ -235,6 +235,7 @@ case 9:
 default:
     print("Error message: Out of Range!")
 }
+
 ***
 
 ## Question 10
@@ -250,6 +251,21 @@ Numeric Score 	Letter Grade
 65 - 69 	D
 Below 65 	F
 ```
+let numericScore = 65
+switch numericScore {
+case 100...:
+    print("A+")
+case 90...100:
+    print("A")
+case 80...90:
+    print("B")
+case 70...80:
+    print("C")
+case 65...70:
+    print("D")
+default:
+    print("F")
+}
 ***
 
 ## Question 11
