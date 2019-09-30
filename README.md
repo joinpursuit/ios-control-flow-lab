@@ -132,13 +132,24 @@ print("It's a beautiful day!")
 ***
 ## Question 6
 
-Given the first name and last name of a Fellow, declare `fullName` variable and use string interpolation to concatenate the Fellow's full name and print to the console e.g The Fellow's full name is John Appleseed
+Given the first name and last name of a Fellow, declare `fullName` variable and use  f to concatenate the Fellow's full name and print to the console e.g The Fellow's full name is John Appleseed
 
 ```swift
 let firstName = "John"
 let lastName = "Appleseed"
 
 // enter code below
+```
+Answer:
+```
+swift
+
+let firstName = "John"
+let lastName = "Appleseed"
+let fullName = "John" + " Appleseed"
+print("Fellow's full name is \(fullName")
+
+
 ```
 
 ***
@@ -159,7 +170,22 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+Answer:
+```
+swift
 
+let temperatureInFarenheit = 85
+
+switch temperatureInFarenheit {
+case ...40 :
+    print("It's cold out")
+case 85... :
+    print("It's really warm")
+default:
+    print(" Weather is moderate")
+}
+
+```
 ***
 
 ## Question 8
@@ -174,13 +200,14 @@ else {
  print("You lose!")
 }
 
-//Answer:
-
-var score = 75
-if score >= 50 {
+```
+Answer:
+```
+var score = 99
+if score >= 75 {
  print("You win!")
-}
-else {score <= 50
+} 
+else {score < 75
  print("You lose!")
 }
 ```
@@ -210,6 +237,32 @@ Output:
 Error
 
 ```
+Answer:
+```
+var numberOfSides = 6
+switch numberOfSides {
+case 3 :
+print("triangle")
+case 4 :
+    print("quadrilateral")
+case 5 :
+    print("pentagon")
+case 6 :
+    print("hexagon")
+case 7:
+    print("septagon")
+case 8:
+    print("octagon")
+case 9:
+    print("nonagon")
+case 10:
+    print("decagon")
+    
+default:
+    print("Error")
+}
+
+```
 ***
 
 ## Question 10
@@ -224,6 +277,10 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+```
+Answer:
+```
+
 ```
 ***
 
