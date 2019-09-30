@@ -269,6 +269,22 @@ Numeric Score 	Letter Grade
 65 - 69 	D
 Below 65 	F
 ```
+
+let numberGrade = 65
+switch numberGrade {
+case 100...:
+    print("A+")
+case 90...99:
+    print("A")
+case 80...89:
+    print("B")
+case 70...79:
+    print("c")
+case 65...69:
+    print("D")
+default:
+    print("F")
+}
 ***
 
 ## Question 11
