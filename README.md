@@ -338,10 +338,24 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 
 ```swift
 let nameAndBirthYear: (String, Int)
-
 ```
 ***
+```
+let nameAndBirthYear = (String:"Hello", Int:30)
+if nameAndBirthYear.Int >= 20 && nameAndBirthYear.Int < 30{
+    print("you are in your twenties")
+} else {
+    print("I don't know what decade of life you're in!")
+}
 
+switch nameAndBirthYear.Int {
+case 20...29 :
+    print("You are in your twenties")
+default:
+    print("I don't know what decade of life you're in!")
+    
+}
+```
 
 ## Question 13
 
@@ -373,7 +387,13 @@ What happens when you change number to:
 What happens when you remove the default clause?
 
 ***
+```
+A. it will say: "Days in year"
+B. it will say: "Bytes in kilobytes"
+C. it will run the default
+D. if you remove the default clause it wouldn't compile
 
+```
 
 ## Question 14
 
@@ -393,6 +413,47 @@ if population > 10000 {
  message = "\(population) is a large town"
 }
 ```
+
+```
+A.
+if population > 10000 {
+ message = "\(population) is a large town"
+    print(message)
+} else if population <= 10000 && population >= 5000 {
+    print("It's a medium size town")
+}
+
+B. if population > 10000 {
+ message = "\(population) is a large town"
+    print(message)
+} else if population <= 10000 && population >= 5000 {
+   message = ("It's a medium size town")
+    print(message)
+    
+} else {
+message = ("It's a med-size town")
+    print(message)
+}
+
+C.
+if population > 10000 {
+ message = "\(population) is a large town"
+    print(message)
+} else if population <= 10000 && population >= 5000 {
+   message = ("It's a medium size town")
+    print(message)
+    
+}
+switch population {
+case 5000...10000:
+    print("it's a medium sized town")
+default:
+    print("it's a large sized town")
+}
+
+
+
+```
 ***
 
 ## Question 15
@@ -406,4 +467,25 @@ b. Using a switch statement
 ```swift
 let myTuple: (Int, Int) = (5, 10)
 ```
+
+```
+if myTuple.0 + myTuple.1 >= 15 {
+    print("the value is 15 or more")
+}
+
+```
 ***
+```
+let myTuple: (Int, Int) = (5, 10)
+
+if myTuple.0 + myTuple.1 >= 15 {
+    print("the value is 15 or more")
+}
+
+switch myTuple.0 + myTuple.1 >= 15 {
+case true :
+    print("It's greater then 15")
+default:
+    print("less then 15")
+}
+```
