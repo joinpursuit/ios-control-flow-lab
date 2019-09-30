@@ -28,10 +28,7 @@ if conditionTwo {
 print("D")
 ```
 
-- A
-- B
-- C
-- D
+A, C, D
 
 ***
 ## Question 2
@@ -50,11 +47,8 @@ switch appInfo {
 }
 ```
 
-- appInfo.0 hasn't released yet
 - myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
-- I'm not quite sure what you are looking at
-- It will give a compile-time error
+
 
 ***
 ## Question 3
@@ -74,10 +68,6 @@ default:
  print("D")
 }
 ```
-
-- A
-- B
-- C
 - D
 
 ***
@@ -98,10 +88,7 @@ case "snickers":
 }
 ```
 
-- No parentheses around the conditions
-- No opening and closing brackets in each of the cases
 - No default case in the switch statement
-- No print statement right outside the switch statement
 
 ***
 ## Question 5
@@ -112,6 +99,17 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 let currentWeather = "rain"
 
 // enter code below
+switch currentWeather {
+case "rain":
+ print("Expecting rain today, bring an umbrella")
+case "snow":
+ print("Expecting snow, grab your gloves")
+ case "sunny":
+  print("It's sunny, grab your shades")
+  default:
+ print("Enjoy your day of good weather")
+}
+
 ```
 
 ***
@@ -120,10 +118,18 @@ let currentWeather = "rain"
 Given the first name and last name of a Fellow, declare `fullName` variable and use string interpolation to concatenate the Fellow's full name and print to the console e.g The Fellow's full name is John Appleseed
 
 ```swift
-let firstName = "John"
+let firstName = "John "
 let lastName = "Appleseed"
 
 // enter code below
+
+let fullName = firstName + lastName
+print("\(fullName) is currently enrolled in pursuit")
+
+
+
+
+
 ```
 
 ***
@@ -143,6 +149,16 @@ if temperatureInFahrenheit <= 40 {
 
 //Re-written statement here
 
+temperatureInFahrenheit = 50
+switch True {
+case temperatureInFarenheit <== 40: 
+print("It's cold out.")
+case temperatureInFarenheit <== 85:
+ print("It's really warm.")
+ default:
+ print("Weather is moderate.")
+}
+
 ```
 
 ***
@@ -152,11 +168,14 @@ if temperatureInFahrenheit <= 40 {
 Complete the following code so that "You win!" is printed.
 
 ```swift
-if {
+var dice = 6
+
+if dice % 2 == 0 { 
  print("You win!")
 } 
 else {
  print("You lose!")
+ 
 }
 ```
 ***
@@ -184,6 +203,32 @@ var numberOfSides = 2
 Output:
 Error
 
+var numberOfSides = 6
+
+
+switch numberOfSides {
+case 3: 
+print("Triangle")
+case 4: 
+print("Square")
+case 5: 
+print("Pentagon")
+case 6: 
+print("Hexagon")
+case 7: 
+print("Heptagon")
+case 8: 
+print("Octagon")
+case 9: 
+print("Nonagon")
+case 10: 
+print("Decagon")
+ default:
+ print("Error")
+}
+
+
+
 ```
 ***
 
@@ -199,6 +244,27 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+
+var gradeNum = 95
+
+switch gradeNum {
+case 100..<200: 
+print("A+")
+case 90..<100: 
+print("A")
+case 80..<90: 
+print("B")
+case 70..<80: 
+print("C")
+case 65..<70: 
+print("D")
+default
+print("F")
+
+}
+
+
+
 ```
 ***
 
@@ -215,6 +281,25 @@ if firstName == "Peter" {
  let lastName = "Collins"
 }
 let fullName = firstName + " " + lastName
+
+//corrected:
+
+let firstName = "Peter"
+var lastName: String = " "
+ 
+
+if firstName == "Peter" {
+  lastName = "Gabriel"
+} else if firstName == "Phil" {
+    lastName = "Collins"
+}
+let fullName = firstName + " " + lastName
+
+
+
+print("\(fullName)")
+
+
 ```
 ***
 
@@ -224,6 +309,21 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 
 ```swift
 let nameAndBirthYear: (String, Int)
+nameAndBirthYear = ("Tanya", 1982)
+let currentYear = 2019
+var decade =  currentYear - nameAndBirthYear.1
+
+if decade 20 => 29{
+    print (" \(nameAndBirthYear.0 ) is in their 20's")
+}else if decade 30...39{
+    print (" \(nameAndBirthYear.0 ) is in their 30's")
+}else if decade = 40...49{
+print (" \(nameAndBirthYear.0) is in their 40's")
+}else if decade = 50...59{
+print (" \(nameAndBirthYear.0) is in their 50's")
+}
+
+
 
 ```
 ***
@@ -250,13 +350,14 @@ default:
 ```
 What happens when you change number to:
 
--a. 365?
+-a. 365? It will print " Days in a year
 
--b. 1024?
+-b. 1024? print "Bytes in a Kilobyte"
 
--c. 65?
+-c. 65? print "Some uninteresting number"
 
 What happens when you remove the default clause?
+There will be an error. It will not run without a default.
 
 ***
 
@@ -277,6 +378,10 @@ var message = String()
 
 if population > 10000 {
  message = "\(population) is a large town"
+ } else if population < 10000 <5000 {
+ print("Medium size town")
+ } else {
+ ("it's a mid size town")
 }
 ```
 ***
