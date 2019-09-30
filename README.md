@@ -308,6 +308,8 @@ nameAndBirthYear = ("Tsering", 1995)
 switch nameAndBirthYear {
 case (_, 1990...1999) :
     print("You are in your twenties.")
+case (_, 1989...1990) :
+   print("You are in your thirties.") 
 default :
     print("You are not in your twenties.")
 }
