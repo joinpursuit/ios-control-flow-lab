@@ -14,8 +14,8 @@
 What will be printed when the code below is run?  Select all that apply.
 
 ```swift
-let conditionOne = !(4 < 5) || !(3 > 8)
-let conditionTwo = !(!true)
+let conditionOne = !(4 < 5) || !(3 > 8) // conditionOne = True
+let conditionTwo = !(!true) // conditionTwo = True
 
 if conditionOne {
  print("A")
@@ -32,6 +32,12 @@ print("D")
 - B
 - C
 - D
+
+/* Question #1 Answer
+
+A, C, and D will all be printed when the code is run.
+
+*/
 
 ***
 ## Question 2
@@ -56,6 +62,11 @@ switch appInfo {
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
 
+/* Question #2 Answer
+
+What will be printed is, myCoolApp hasn't released yet.
+
+*/
 ***
 ## Question 3
 
@@ -80,6 +91,11 @@ default:
 - C
 - D
 
+/* Question #3 Answer
+
+D will be printed to the console.
+
+*/
 ***
 ## Question 4
 
@@ -103,6 +119,11 @@ case "snickers":
 - No default case in the switch statement
 - No print statement right outside the switch statement
 
+/* Question #4 Answer
+
+The only error in this code is the lack of a default case.
+
+*/
 ***
 ## Question 5
 
@@ -113,7 +134,21 @@ let currentWeather = "rain"
 
 // enter code below
 ```
+/* Question #5 Answer
 
+switch currentWeather{
+
+case "rain":
+print("It is highly recommended that you bring along an umbrella today.")
+case "sunny":
+    print("Rejoice, for you will have no need of an umbrella today!")
+case "snow":
+    print("It will snow today.")
+default:
+   break
+}
+
+*/
 ***
 ## Question 6
 
@@ -125,7 +160,13 @@ let lastName = "Appleseed"
 
 // enter code below
 ```
+/* Question #6 Answer 
 
+let fullName: String
+fullName = firstName + " " + lastName"
+print("The Fellow's full name is \(fullName).")
+
+*/
 ***
 
 ## Question 7
@@ -144,7 +185,24 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+/* Question #7 Answer
 
+Assuming temperatureInFahrenheit is some Integer variable or constant that is already defined.
+
+switch temperatureInFahrenheit{
+
+case ...40:
+    print("It is cold out.")
+    
+case 85...:
+    print("It is really warm.")
+    
+default:
+    print("Weather is moderate.")
+    
+}
+
+*/
 ***
 
 ## Question 8
@@ -159,6 +217,17 @@ else {
  print("You lose!")
 }
 ```
+/* Question #8 Answer
+
+if (true) {
+ print("You win!")
+} 
+else {
+ print("You lose!")
+}
+
+
+*/
 ***
 
 ## Question 9
@@ -185,6 +254,60 @@ Output:
 Error
 
 ```
+/* Question #9 Answer
+
+Example 1:
+
+var numberOfSides = 4
+
+switch numberOfSides{
+case 3:
+    print("Triangle")
+case 4:
+    print("Square (Quadrilateral)")
+case 5:
+    print("Pentagon")
+case 6:
+    print("Hexagon")
+case 7:
+    print("Septagon")
+case 8:
+    print("Octagon")
+case 9:
+    print("Nonagon")
+case 10:
+    print("Decagon")
+default:
+    print("Error")
+}
+
+Example 2:
+
+var numberOfSides = 2
+
+switch numberOfSides{
+case 3:
+    print("Triangle")
+case 4:
+    print("Square (Quadrilateral)")
+case 5:
+    print("Pentagon")
+case 6:
+    print("Hexagon")
+case 7:
+    print("Septagon")
+case 8:
+    print("Octagon")
+case 9:
+    print("Nonagon")
+case 10:
+    print("Decagon")
+default:
+    print("Error")
+}
+
+
+*/
 ***
 
 ## Question 10
@@ -200,6 +323,27 @@ Numeric Score 	Letter Grade
 65 - 69 	D
 Below 65 	F
 ```
+/* Question #10 Answer
+
+var numberGrade: Double
+
+switch numberGrade{
+case ..<65:
+    print("F")
+case 65...69:
+    print("D")
+case 70...79:
+    print("C")
+case 80...89:
+    print("B")
+case 90...99:
+    print("A")
+default:
+    print("A+")
+}
+
+
+*/
 ***
 
 ## Question 11
@@ -216,6 +360,25 @@ if firstName == "Peter" {
 }
 let fullName = firstName + " " + lastName
 ```
+/* Question #11 Answer
+The last line is problematic because the compiler sees it and doesn't see a "lastName" variable that has been defined within the global scope. The constant lastName is conditionally defined within the scope of the if/else block.
+
+let firstName = "Peter"
+var lastName = ""
+
+if firstName == "Peter" {
+
+    lastName = "Gabriel"
+    
+} else if firstName == "Phil" {
+
+    lastName = "Collins"
+    
+}
+
+let fullName = firstName + " " + lastName
+
+*/
 ***
 
 ## Question 12
@@ -226,6 +389,84 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 let nameAndBirthYear: (String, Int)
 
 ```
+/* Question #12 Answer 
+
+Assuming that I am given a birthyear and not an explicit age.
+
+if( nameAndBirthYear.1 <= 2019 && nameAndBirthYear >= 2010 ) {
+
+    print("You are between 0 and 9 years of age.")
+    
+} else if( nameAndBirthYear.1 <= 2009 && nameAndBirthYear.1 >=  2000 ){
+
+    print("You are between 10 and 19 years of age.")
+    
+} else if( nameAndBirthYear.1 <= 1999 && nameAndBirthYear.1 >=  1990 ){
+
+    print("You are in your twenties.")
+    
+} else if( nameAndBirthYear.1 <= 1989 && nameAndBirthYear.1 >=  1980 ){
+
+    print("You are in your thirties.")
+    
+} else if( nameAndBirthYear.1 <= 1979 && nameAndBirthYear.1 >=  1970 ){
+
+    print("You are in your forties.")
+    
+} else if( nameAndBirthYear.1 <= 1969 && nameAndBirthYear.1 >=  1960 ){
+
+    print("You are in your fifties.")
+    
+} else if( nameAndBirthYear.1 <= 1959 && nameAndBirthYear.1 >=  1950 ){
+
+    print("You are in your sixties.")
+    
+} else if( nameAndBirthYear.1 <= 1949 && nameAndBirthYear.1 >=  1940 ){
+
+    print("You are in your seventies.")
+    
+} else if( nameAndBirthYear.1 <= 1939 && nameAndBirthYear.1 >=  1930 ){
+
+    print("You are in your eighties.")
+    
+} else if( nameAndBirthYear.1 <= 1929 && nameAndBirthYear.1 >=  1920 ){
+
+    print("You are in your nineties.")
+    
+} else {
+
+    print("You are at least 100. Good for you!")
+    
+}
+
+
+switch nameAndBirthYear{
+case (_,2010...2019):
+    print("You are between 0 and 9 years of age.")
+case (_,2000...2009):
+    print("You are between 10 and 19 years of age.")
+case (_,1990..1999):
+    print("You are in your twenties.") 
+case (_,1980..1989):
+    print("You are in your thirties.") 
+case (_,1970..1979):
+    print("You are in your forties.") 
+case (_,1960..1969):
+    print("You are in your fifties.") 
+case (_,1950..1959):
+    print("You are in your sixties.") 
+case (_,1940..1949):
+    print("You are in your seventies.") 
+case (_,1930..1939):
+    print("You are in your eighties.") 
+case (_,1920..1929):
+    print("You are in your nineties.") 
+default:
+    print("You are at least 100. Good for you!")
+}
+
+
+*/
 ***
 
 
@@ -247,6 +488,7 @@ case 42:
  print("The answer to life, the universe and everything")
 default:
  print("Some uninteresting number")
+ }
 ```
 What happens when you change number to:
 
@@ -258,6 +500,15 @@ What happens when you change number to:
 
 What happens when you remove the default clause?
 
+/* Question #13 Answer
+
+When the value of number is 42, the above switch statment will print out, "The answer to life, the universe and everything." 
+If the value of number is changed to 365, the switch statement will print out, "Days in year". 
+If the value of number is changed to 1024, the switch statment will print out, "Bytes in a Kilobyte." 
+If the vaule of number is changed to 65, the switch statement will print out, "Some uninteresting number." 
+If you remove the default case, you will run into a compiler error.
+
+*/
 ***
 
 
@@ -267,7 +518,7 @@ Consider the variable below called population and the if-condition.
 
 a. Add an else-if-condition that states if population is less than 10000 but greater than 5000, then message changes to say it's "a medium size town".
 
-b. Add an else-condition where message changes to say it's a mid-size town.
+b. Add an else-condition where message changes to say it's a mid-size town. 
 
 c. Convert your final if-else statement to a switch statement.
 
@@ -279,6 +530,39 @@ if population > 10000 {
  message = "\(population) is a large town"
 }
 ```
+/* Question #14 Answer
+
+var population: Int = 10000
+var message = String()
+
+if (population > 10000) {
+
+ message = "\(population) is a large town"
+ 
+} else if( population < 100000 && population >= 5000 ){ 
+
+ message = "\(population) is a medium size town."
+ 
+} else {
+ 
+ message = " \(population) is a mid-size town."
+ 
+}
+
+switch population{
+
+case 100000:
+message = "\(population) is a large town."
+
+case 5000..<100000:
+message = "\(population) is a medium size town."
+
+default:
+message = "\(population) is a mid size town."
+
+}
+
+*/
 ***
 
 ## Question 15
@@ -292,4 +576,57 @@ b. Using a switch statement
 ```swift
 let myTuple: (Int, Int) = (5, 10)
 ```
+/* Question #15 Answer
+a. 
+
+if ( myTuple.0 + myTuple.1 >= 15){
+
+    print("The sum of the two numbers in the tuple is at least 15.")
+    
+} else{
+
+    print("The sum of the two numbers in the tuple is less than 15.")
+    
+}
+
+b.
+
+switch myTuple{
+    case (0...,15...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (1...,14...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (2...,13...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (3...,12...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (4...,11...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (5...,10...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (6...,9...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (7...,8...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (8...,7...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (9...,6...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (10...,5...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (11...,4...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (12...,3...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (13...,2...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (14...,1...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    case (15...,0...):
+    print("The sum of the two numbers in the tuple is at least 15.")
+    default:
+    print("The sum of the two numbers in the tuple is less than 15.")
+}
+
+*/
 ***
