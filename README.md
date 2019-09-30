@@ -30,10 +30,17 @@ print("D")
 
 - A
 - B
-- C
-- D
+- (C)
+- (D)
 
 ***
+```
+Answer
+
+```swift
+
+will print C and D
+```
 ## Question 2
 
 What will the code block below print?  Select all that apply:
@@ -57,6 +64,11 @@ switch appInfo {
 - It will give a compile-time error
 
 ***
+```
+ANSWER
+      ```swift
+Will print "myCoolApp hasn't released yet."
+```
 ## Question 3
 
 What will be printed to the console when the code below is run?  Select all that apply.
@@ -78,9 +90,10 @@ default:
 - A
 - B
 - C
-- D
+- (D)      Will print D
 
 ***
+
 ## Question 4
 
 What are the errors in the code below for the switch statement? Select all that apply.
@@ -100,7 +113,7 @@ case "snickers":
 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
-- No default case in the switch statement
+- (No default case in the switch statement) ---Answer
 - No print statement right outside the switch statement
 
 ***
@@ -113,7 +126,21 @@ let currentWeather = "rain"
 
 // enter code below
 ```
+ANSWER
+```swift
 
+let currentWeather = "rain"
+switch currentWeather {
+case "snow" :
+print("BUUUURRRRRRRR IT'S COLD IN HERE🥶🥶🥶")
+case "rain" :
+print("It's raining 🌧, it's pouring💦, the old man is snoring👴🏾💤")
+case "sunny" :
+print("EVERYBODY'S GOT A LITTLE LIGHT UNDER THE SUN, UNDER THE SUN, UNDER THE SUN, UND......")
+default:
+print("Watch Fox News")
+}
+```
 ***
 ## Question 6
 
@@ -125,7 +152,15 @@ let lastName = "Appleseed"
 
 // enter code below
 ```
+ANSWER
+```swift
 
+let firstName = "John"
+let lastName = " Appleseed"
+
+let fullName = firstName + lastName
+print("The Fellow's full name is \(fullName).")
+```
 ***
 
 ## Question 7
@@ -144,6 +179,19 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+ANSWER
+```swift
+
+var temperatureInFahrenheit = 60
+switch true {
+case temperatureInFahrenheit <= 40 :
+print("It's cold out!")
+case temperatureInFahrenheit >= 85 :
+    print("It's really warm")
+default:
+print("Weather is moderate")
+}
+```
 
 ***
 
@@ -155,6 +203,17 @@ Complete the following code so that "You win!" is printed.
 if {
  print("You win!")
 } 
+else {
+ print("You lose!")
+}
+```
+ANSWER
+```swift
+
+var points = 102
+if points >= 100 {
+ print("You win!")
+}
 else {
  print("You lose!")
 }
@@ -185,6 +244,35 @@ Output:
 Error
 
 ```
+ANSWER
+```swift
+var numberOfSides = 6
+
+switch numberOfSides {
+case 1 :
+print("Error")
+case 2 :
+print("Error")
+case 3 :
+print("Triangle")
+case 4 :
+print("Square")
+case 5 :
+print("Pentagon")
+case 6 :
+print("Hexagon")
+case 7 :
+print("Heptagon")
+case 8 :
+print("Octagon")
+case 9 :
+print("Enneagon")
+case 10 :
+print("Decagon")
+default :
+    print("Enter number")
+}
+```
 ***
 
 ## Question 10
@@ -199,6 +287,27 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+```
+ANSWER
+```swift
+
+var gradePointAverage = 87
+switch gradePointAverage {
+case 100 :
+    print("A+")
+case 90...99 :
+    print("A")
+case 80...89 :
+    print("B")
+case 70...79 :
+    print("C")
+case 65...69 :
+    print("D")
+case 0..<65 :
+    print("F")
+default:
+    print("Course is Incomplete")
+}
 ```
 ***
 
