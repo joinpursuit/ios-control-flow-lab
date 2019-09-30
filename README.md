@@ -122,6 +122,17 @@ let currentWeather = "rain"
 
 // enter code below
 ```
+let currentWeather = "rain"
+switch currentWeather {
+case "rain":
+    print("damnnnnnnn")
+case "snow":
+    print("🌨")
+case "sunny":
+    print("☀️")
+default:
+    print("whats going on ")
+
 
 ***
 ## Question 6
@@ -132,8 +143,13 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 let firstName = "John"
 let lastName = "Appleseed"
 
+
 // enter code below
 ```
+let firstName = "John"
+let lastName = "Appleseed"
+let fullName = "john"+" "+"appleseed" // or you can just write let fullName = "john"+" appleseed"
+print("fellows full name \(fullName)")
 
 ***
 
@@ -153,6 +169,17 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+let temperatureInFahrenheit = 85
+    switch temperatureInFahrenheit {
+    case ...40 :
+        print("it's cold out.")
+    case 85... :
+        print("It's really warm.")
+        
+    default:
+        print("weather is moderate")
+}
+
 
 ***
 
@@ -168,6 +195,16 @@ else {
  print("You lose!")
 }
 ```
+var love = 2
+
+if love >= 2 {
+ print("You win!")
+}
+else { love < 2
+ print("You lose!")
+}
+
+
 ***
 
 ## Question 9
@@ -194,6 +231,29 @@ Output:
 Error
 
 ```
+var numberOfSides = 6
+
+switch numberOfSides {
+case 3:
+    print("triangle")
+case 4:
+    print("square")
+case 5:
+    print("pentagon")
+case 6:
+    print("hexagon")
+case 7:
+    print("heptagon")
+case 8:
+    print("octagon")
+case 9:
+    print("nonagon")
+case 10:
+    print("decagon")
+default:
+        print("error")
+}
+
 ***
 
 ## Question 10
