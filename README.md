@@ -33,6 +33,7 @@ print("D")
 - C
 - D
 
+Answers: A,C,D
 ***
 ## Question 2
 
@@ -56,6 +57,8 @@ switch appInfo {
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
 
+Answer: myCoolApp hasn't released yet
+
 ***
 ## Question 3
 
@@ -74,6 +77,7 @@ default:
  print("D")
 }
 ```
+Answer: D
 
 - A
 - B
@@ -103,6 +107,8 @@ case "snickers":
 - No default case in the switch statement
 - No print statement right outside the switch statement
 
+Answer: No default
+
 ***
 ## Question 5
 
@@ -111,7 +117,17 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
-// enter code below
+// Answer:
+
+switch currentWeather.lowercased() {
+case "rain" :
+print("It is raining.")
+case "sunny" :
+print("It is sunny.")
+case "snow" :
+print("It is snowing.")
+default:
+print("Unknown Weather")
 ```
 
 ***
@@ -120,10 +136,15 @@ let currentWeather = "rain"
 Given the first name and last name of a Fellow, declare `fullName` variable and use string interpolation to concatenate the Fellow's full name and print to the console e.g The Fellow's full name is John Appleseed
 
 ```swift
+
+// Answer: 
+
 let firstName = "John"
 let lastName = "Appleseed"
 
-// enter code below
+let fullName = firstName + " " + lastName
+
+print ("The Fellow's full name is \(fullName)")
 ```
 
 ***
@@ -141,7 +162,17 @@ if temperatureInFahrenheit <= 40 {
  print("Weather is moderate.")
 }
 
-//Re-written statement here
+// Answer: 
+
+switch true {
+case temperatureInFahrenheit <= 40:
+     print("It's cold out.")
+case temperatureInFahrenheit >= 85:
+     print("It's really warm.")
+default:
+     print("Weather is moderate.")
+}
+
 
 ```
 
@@ -152,9 +183,14 @@ if temperatureInFahrenheit <= 40 {
 Complete the following code so that "You win!" is printed.
 
 ```swift
-if {
- print("You win!")
-} 
+
+//Answer:
+
+let result = "winner"
+  
+if result == "winner"{
+    print("You win!")
+}
 else {
  print("You lose!")
 }
@@ -184,6 +220,30 @@ var numberOfSides = 2
 Output:
 Error
 
+// Answer 
+
+switch numberOfSides {
+case 3:
+    print("Triangle")
+case 4:
+    print("Square")
+case 5:
+    print("Pentagon")
+case 6:
+    print("Hexagon")
+case 7:
+    print("Heptagon")
+case 8:
+    print("Octagon")
+case 9:
+    print("Nonagon")
+case 10:
+    print("Decagon")
+default:
+    print("Error")
+}
+
+
 ```
 ***
 
@@ -192,13 +252,32 @@ Error
 Create a switch statement that will convert a number grade into a letter grade as shown below:
 
 ```swift
-Numeric Score 	Letter Grade
-100 	A+
-90 - 99	A
-80 - 89	B
-70 - 79 	C
-65 - 69 	D
-Below 65 	F
+Numeric Score     Letter Grade
+100     A+
+90 - 99    A
+80 - 89    B
+70 - 79     C
+65 - 69     D
+Below 65     F
+
+var letterGrade = 92
+
+switch letterGrade {
+case(100):
+    print("A+")
+case(90...99):
+    print("A")
+case(80...89):
+    print("B")
+case(70...79):
+    print("C")
+case(65...69):
+    print("D")
+case(0...64):
+    print("F")
+default:
+    print("Not valid grade")
+}
 ```
 ***
 
@@ -215,6 +294,19 @@ if firstName == "Peter" {
  let lastName = "Collins"
 }
 let fullName = firstName + " " + lastName
+
+//Answer: 
+
+let firstName = "Peter"
+var lastName = "Last name"
+
+if firstName == "Peter" {
+  lastName = "Gabriel"
+} else if firstName == "Phil" {
+  lastName = "Collins"
+}
+let fullName = firstName + " " + lastName
+print(fullName)
 ```
 ***
 
@@ -224,6 +316,44 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 
 ```swift
 let nameAndBirthYear: (String, Int)
+
+//Answer:
+
+let nameAndBirthYear = (name: "Melvin", birthyear: 1964)
+switch nameAndBirthYear {
+case (_, 2010...2019) :
+    print("\(nameAndBirthYear.name), you are under 10.")
+case (_, 2000...2009) :
+    print("\(nameAndBirthYear.name), you are in your tens/teens.")
+case (_, 1990...1999) :
+    print("\(nameAndBirthYear.name), you are in your twenties.")
+case (_, 1980...1989) :
+    print("\(nameAndBirthYear.name), you are in your thirties.")
+case (_, 1970...1979) :
+    print("\(nameAndBirthYear.name), you are in your forties.")
+case (_, 1960...1969) :
+    print("\(nameAndBirthYear.name), you are in your fifties.")
+default:
+print("\(nameAndBirthYear.name), you are 60 or older.")
+
+let name = "Melvin"
+let birthYear = 1974
+
+if birthYear > 2009 && birthYear <= 2019 {
+    print("\(name), you are under 10.")
+} else if birthYear > 1999 && birthYear <= 2009 {
+    print("\(name), you are in your tens/teens.")
+    } else if birthYear > 1989 && birthYear <= 1999 {
+    print("\(name), you are in your twenties.")
+} else if birthYear > 1979 && birthYear <= 1989 {
+    print("\(name), you are in your thirties.")
+} else if birthYear > 1969 && birthYear <= 1979 {
+    print("\(name), you are in your forties.")
+} else {
+print("\(name), you are 50 or older.")
+
+}
+
 
 ```
 ***
@@ -248,13 +378,21 @@ case 42:
 default:
  print("Some uninteresting number")
 ```
+Answer: The answer to life, the universe and everything 
+
 What happens when you change number to:
 
 -a. 365?
 
+Answer: Days in a year
+
 -b. 1024?
 
+Answer: Bytes in a Kilobyte
+
 -c. 65?
+
+Answer: Some uninteresting number
 
 What happens when you remove the default clause?
 
@@ -278,6 +416,35 @@ var message = String()
 if population > 10000 {
  message = "\(population) is a large town"
 }
+
+// Answer:
+var population: Int = 10000
+var message = String()
+
+if population > 10000 {
+ message = "\(population) is a large town"
+} else if population < 10000 && population > 5000 {
+    message = "\(population) is a medium size town"
+} else {
+    message = "\(population) is a mid-size town"
+}
+print(message)
+
+// C Answer:
+
+var population: Int = 10000
+var message = String()
+
+switch true {
+case population > 10000 :
+ message = "\(population) is a large town"
+case population < 10000 && population > 5000 :
+    message = "\(population) is a medium size town"
+default:
+    message = "\(population) is a mid-size town"
+}
+print(message)
+
 ```
 ***
 
@@ -290,6 +457,32 @@ a. Using a conditional
 b. Using a switch statement
 
 ```swift
+Answer A:
+
 let myTuple: (Int, Int) = (5, 10)
+
+let tupleSum = ((myTuple.0)+(myTuple.1))
+
+if tupleSum >= 15 {
+    print("My tuple sum is at least 15.")
+} else {
+    print("My tuple sum is less than 15.")
+    
+}
+
+Answer B:
+
+switch tupleSum {
+case 0..<15:
+print("My tuple sum is less than 15.")
+case 15...:
+print("My tuple sum is at least 15.")
+default:
+print("Error")
+}
+
+
+
+
 ```
 ***
