@@ -401,11 +401,7 @@ b. Using a switch statement
 let myTuple: (Int, Int) = (5, 10)
 let tupleResult = myTuple.0 + myTuple.1
 
-if tupleResult >= 15 {
-print("The sum is at least 15")
-} else  {
-print("sum not at least 15")
-}
+print(tupleResult >= 15 ? "The sum is at least 15" : "sum not at least 15")
 
 switch tupleResult {
 case 0..<15:
