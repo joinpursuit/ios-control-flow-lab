@@ -63,7 +63,7 @@ switch appInfo {
 ________________________________________
 Answer:
 - myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
+
 
 ***
 ## Question 3
@@ -378,6 +378,41 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 let nameAndBirthYear: (String, Int)
 
 ```
+Answer:
+let nameAndBirthYear = ("Aaron", 23)
+
+switch nameAndBirthYear {
+case ("Aaron", 0...10):
+print("Your are a child")
+case ("Aaron", 11...20):
+print("You are a teenager")
+case ("Aaron", 21...30):
+print("You are in your twenties")
+case ("Aaron", 31...40):
+print("You are in your thirties")
+case ("Aaron", 41...50):
+print("You are in your fourties")
+default:
+print("You are too old, sorry dude")
+}
+
+let nameAndBirthYear = ("Aaron", 23)
+
+if 0...10 ~= nameAndBirthYear.1 {
+print("Your are a child")
+} else if 11...20 ~= nameAndBirthYear.1 {
+print("You are a teenager")
+} else if 21...30 ~= nameAndBirthYear.1 {
+print("You are in your twenties")
+} else if 31...40 ~= nameAndBirthYear.1 {
+} else if 41...50 ~= nameAndBirthYear.1 {
+print("You are in your fourties")
+} else {
+print("Ypu are too old too old, sorry dude")
+}
+
+
+
 ***
 
 
@@ -443,6 +478,36 @@ if population > 10000 {
  message = "\(population) is a large town"
 }
 ```
+____________________________________________
+Answer:
+a-b:
+var population: Int = 10000
+var message = String()
+
+if population > 10000 {
+ message = "\(population) is a large town"
+} else if population > 5000 && population < 10000 {
+message = "\(population) is a medium town"
+} else {
+message = "It's a mid-size town"
+}
+print(message)
+
+c:
+var population: Int = 10000
+var message = String()
+
+switch population {
+case 10001...:
+    message = "\(population) is a large town"
+case 5001..<10000:
+    message = "\(population) is a medium town"
+default:
+    message = "It's a mid-size town"
+}
+print(message)
+
+
 ***
 
 ## Question 15
@@ -456,4 +521,25 @@ b. Using a switch statement
 ```swift
 let myTuple: (Int, Int) = (5, 10)
 ```
-***
+__________________________________
+Answer:
+let myTuple: (Int, Int) = (5, 10)
+let sumOfMyTuple = myTuple.0 + myTuple.1
+
+if sumOfMyTuple == 15 {
+    print("Sum is equal to 15")
+} else {
+    print("Sum is not equal 15")
+}
+
+Using switch:
+
+let myTuple: (Int, Int) = (5, 10)
+let sumOfMyTuple = myTuple.0 + myTuple.1
+
+switch sumOfMyTuple {
+case 15:
+    print("Sum is equal to 15")
+default:
+    print("Sum is not equal 15")
+}
