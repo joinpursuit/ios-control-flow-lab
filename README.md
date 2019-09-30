@@ -27,7 +27,7 @@ if conditionTwo {
 }
 print("D")
 ```
-
+// a,c,d
 - A
 - B
 - C
@@ -49,6 +49,7 @@ switch appInfo {
  print("I'm not quite sure what you are looking at")
 }
 ```
+answer   appInfo.0 hasent released yet 
 
 - appInfo.0 hasn't released yet
 - myCoolApp hasn't released yet
@@ -75,6 +76,12 @@ default:
 }
 ```
 
+answer print d 
+case one  would print 1,2,3 but not 4 
+case b prints 5-9  not 10 
+case double is not declared correctly
+default means print 
+
 - A
 - B
 - C
@@ -97,7 +104,9 @@ case "snickers":
  print("Hungry? Grab a Snickers")
 }
 ```
-
+ answer 
+ - No default case in the switch statement
+ 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
 - No default case in the switch statement
