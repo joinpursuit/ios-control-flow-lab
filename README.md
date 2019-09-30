@@ -14,8 +14,8 @@
 What will be printed when the code below is run?  Select all that apply.
 
 ```swift
-let conditionOne = !(4 < 5) || !(3 > 8) // ConditionOne = True
-let conditionTwo = !(!true) // True
+let conditionOne = !(4 < 5) || !(3 > 8) // conditionOne = True
+let conditionTwo = !(!true) // conditionTwo = True
 
 if conditionOne {
  print("A")
@@ -145,7 +145,7 @@ case "sunny":
 case "snow":
     print("It will snow today.")
 default:
-    print("")
+   break
 }
 
 */
@@ -160,7 +160,7 @@ let lastName = "Appleseed"
 
 // enter code below
 ```
-/* Question #6 Answer //THE WORDING IS UNUSUAL HERE. ASK A QUESTION ABOUT WHAT IS EXPECTED.
+/* Question #6 Answer 
 
 let fullName: String
 fullName = firstName + " " + lastName"
@@ -261,8 +261,6 @@ Example 1:
 var numberOfSides = 4
 
 switch numberOfSides{
-case 0..<3:
-    print("Error")
 case 3:
     print("Triangle")
 case 4:
@@ -288,8 +286,6 @@ Example 2:
 var numberOfSides = 2
 
 switch numberOfSides{
-case 0..<3:
-    print("Error")
 case 3:
     print("Triangle")
 case 4:
@@ -393,7 +389,7 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 let nameAndBirthYear: (String, Int)
 
 ```
-/* Question #12 Answer //ASK IF BIRTHYEAR OR AGE
+/* Question #12 Answer 
 
 Assuming that I am given a birthyear and not an explicit age.
 
@@ -492,6 +488,7 @@ case 42:
  print("The answer to life, the universe and everything")
 default:
  print("Some uninteresting number")
+ }
 ```
 What happens when you change number to:
 
@@ -505,7 +502,7 @@ What happens when you remove the default clause?
 
 /* Question #13 Answer
 
-When teh value of number is 42, the above switch statment will print out, "The answer to life, the universe and everything." 
+When the value of number is 42, the above switch statment will print out, "The answer to life, the universe and everything." 
 If the value of number is changed to 365, the switch statement will print out, "Days in year". 
 If the value of number is changed to 1024, the switch statment will print out, "Bytes in a Kilobyte." 
 If the vaule of number is changed to 65, the switch statement will print out, "Some uninteresting number." 
@@ -521,7 +518,7 @@ Consider the variable below called population and the if-condition.
 
 a. Add an else-if-condition that states if population is less than 10000 but greater than 5000, then message changes to say it's "a medium size town".
 
-b. Add an else-condition where message changes to say it's a mid-size town. //WHAT IS THIS ASKING ME TO DO?
+b. Add an else-condition where message changes to say it's a mid-size town. 
 
 c. Convert your final if-else statement to a switch statement.
 
