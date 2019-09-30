@@ -304,14 +304,13 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 ```swift
 let nameAndBirthYear: (String, Int)
 
-nameAndBirthYear = ("Tsering", 1995)
-nameAndBirthYear.1
-nameAndBirthYear.0
+nameAndBirthYear = ("Tsering", 24)
 
-if nameAndBirthYear.1 == 1999 {
+if nameAndBirthYear.1 >20 &&  nameAndBirthYear.1 < 30 {
     print("you are in your twenties")
 } else {
     print("you are not in your twenties")
+  }
 
 
 nameAndBirthYear = ("Tsering", 1995)
