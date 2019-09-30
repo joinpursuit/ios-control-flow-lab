@@ -389,6 +389,33 @@ if population > 10000 {
  message = "\(population) is a large town"
 }
 ```
+//
+a+b:
+var population = 10000
+var message = String()
+
+if population > 10000 {
+ message = "\(population) is a large town"
+} else if 5000...9999 ~= population {
+print("It is a medium size town")
+} else if population == 10000{
+print("it's a mid size town")
+}
+c:
+var population = 10000
+var message = String()
+
+switch population {
+case  10000...:
+ print("\(population) is a large town")
+case 5000...9999:
+print("\(population) is a medium size town")
+case 10000:
+print("\(population) is a mid size town")
+default:
+    print("\(population) is small size town")
+}
+
 ***
 
 ## Question 15
@@ -396,8 +423,22 @@ if population > 10000 {
 Complete the code below so that it prints out and tells the user if the sum of the two numbers in the tuple is at least 15.
 
 a. Using a conditional
+//
+let myTuple: (Int, Int) = (5, 10)
+if myTuple.0 + myTuple.1 >= 15 {
+print("The sum of two numbers in the tuple is at least 15")
+}
 
 b. Using a switch statement
+//
+var sum = myTuple.0 + myTuple.1
+
+switch sum {
+case 15...:
+    print("sum is at least 15")
+default:
+    print("sum is below 15")
+}
 
 ```swift
 let myTuple: (Int, Int) = (5, 10)
