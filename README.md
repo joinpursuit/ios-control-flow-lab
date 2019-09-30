@@ -33,6 +33,8 @@ print("D")
 - C
 - D
 
+A,C,D 
+
 ***
 ## Question 2
 
@@ -55,6 +57,10 @@ switch appInfo {
 - Thanks for looking at myCoolApp!
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
+
+appInfo.0 hasn't released yet
+Thanks for looking at myCoolApp!
+
 
 ***
 ## Question 3
@@ -80,6 +86,8 @@ default:
 - C
 - D
 
+D
+
 ***
 ## Question 4
 
@@ -96,12 +104,15 @@ case "skittles":
 case "snickers":
  print("Hungry? Grab a Snickers")
 }
+
 ```
 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
 - No default case in the switch statement
 - No print statement right outside the switch statement
+
+no default case in the switch statement 
 
 ***
 ## Question 5
@@ -111,7 +122,16 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
-// enter code below
+switch currentWeather {
+case "rain": 
+ print("umbrella")
+case "sunny":
+ print("sunscreen")
+case "snow":
+ print("jacket")
+default:
+ print("stay home")
+}
 ```
 
 ***
@@ -121,9 +141,11 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 
 ```swift
 let firstName = "John"
-let lastName = "Appleseed"
+let lastName = " Appleseed"
 
-// enter code below
+var fullName = firstName + lastName
+print("The Fellow's full name is \(fullName)")
+
 ```
 
 ***
@@ -141,7 +163,14 @@ if temperatureInFahrenheit <= 40 {
  print("Weather is moderate.")
 }
 
-//Re-written statement here
+switch temperatureInFahrenheit {
+case 0...40:
+ print("It's cold out.")
+case 85...200: 
+ print("It's really warm.") 
+default:
+ print("Weather is moderate")
+ }
 
 ```
 
@@ -152,12 +181,19 @@ if temperatureInFahrenheit <= 40 {
 Complete the following code so that "You win!" is printed.
 
 ```swift
-if {
+
+var personOne = "winner"
+var personTwo = "loser"
+var contestant = personOne
+
+if contestant == personOne {
  print("You win!")
-} 
+}
 else {
  print("You lose!")
 }
+
+
 ```
 ***
 
@@ -184,6 +220,29 @@ var numberOfSides = 2
 Output:
 Error
 
+switch numberOfSides {
+case 0...2:
+print("Error")
+case 3:
+print("triangle")
+case 4:
+print("square")
+case 5:
+print("pentagon")
+case 6:
+print("hexagon")
+case 7:
+print("heptagon")
+case 8:
+print("octagon")
+case 9: 
+print("nonagon")
+case 10:
+print("decagon")
+default:
+print("out of range")
+}
+
 ```
 ***
 
@@ -199,6 +258,26 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+
+var numberToLetter = 98
+switch numberToLetter {
+case 100:
+print("A+")
+case 90...99:
+print("A")
+case 80...89:
+print("B")
+case 70...79:
+print("C")
+case 65...69:
+print("D")
+case 0..<65: 
+print("F")
+default:
+print("not grade here")
+}
+
+A+
 ```
 ***
 
@@ -210,11 +289,11 @@ What is wrong with the block of code below?  Correct it so it behaves as expecte
 let firstName = "Peter"
 
 if firstName == "Peter" {
- let lastName = "Gabriel"
+ print("\(firstName) Gabriel")
 } else if firstName == "Phil" {
- let lastName = "Collins"
+ print("\(firstName) Collins")
 }
-let fullName = firstName + " " + lastName
+
 ```
 ***
 
@@ -224,6 +303,14 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 
 ```swift
 let nameAndBirthYear: (String, Int)
+
+nameAndBirthYear = ("Tsering", 1995)
+switch nameAndBirthYear {
+case (_, 1990...1999) :
+    print("You are in your twenties.")
+default :
+    print("You are not in your twenties.")
+}
 
 ```
 ***
@@ -246,17 +333,19 @@ case 0:
 case 42:
  print("The answer to life, the universe and everything")
 default:
- print("Some uninteresting number")
+print("Some uninteresting number"
 ```
 What happens when you change number to:
 
--a. 365?
+-a. 365? Days in year 
 
--b. 1024?
+-b. 1024? Bytes in  a Kilobyte 
 
--c. 65?
+-c. 65? Some unintersting number 
 
 What happens when you remove the default clause?
+
+doesnt compile 
 
 ***
 
@@ -275,9 +364,28 @@ c. Convert your final if-else statement to a switch statement.
 var population: Int = 10000
 var message = String()
 
-if population > 10000 {
+a) if population > 10000 {
  message = "\(population) is a large town"
+} else if population < 10000 && population > 5000 {
+message = \"population" is a medium size town"
 }
+
+b) if population > 10000 {
+ message = "\(population) is a large town"
+} else if population < 10000 && population > 5000 {
+message = \"population" is a medium size town"
+} else {
+message = "It's a mid-size town"
+}
+
+c) switch population 
+case 10000: 
+print("\(population)its a large town")
+case 5000..<10000 =:
+print("\(population) it's a mid-size town)"
+default:
+print("No such town")
+
 ```
 ***
 
@@ -291,5 +399,21 @@ b. Using a switch statement
 
 ```swift
 let myTuple: (Int, Int) = (5, 10)
+let tupleResult = myTuple.0 + myTuple.1
+
+if tupleResult >= 15 {
+print("The sum is at least 15")
+} else  {
+print("sum not at least 15")
+}
+
+switch tupleResult {
+case 0..<15:
+print("sum not at least 15")
+case 0...15:
+print("The sum is at least 15")
+default:
+print("not applicanble")
+
 ```
 ***
