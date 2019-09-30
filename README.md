@@ -462,7 +462,7 @@ let myTuple: (Int, Int) = (5, 10)
 ```
 // if statment:
 
-if myTuple.0 + myTuple.1 == 15 {
+if myTuple.0 + myTuple.1 >= 15 {
     print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is 15")
 } else {
     print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is not 15")
@@ -473,7 +473,7 @@ if myTuple.0 + myTuple.1 == 15 {
 var sum = myTuple.0 + myTuple.1
 
 switch sum {
-case 15:
+case 15...:
     print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is 15")
 default:
     print("The sum of the two numbers in the tuple: \(myTuple.0) and \(myTuple.1) is not 15")
