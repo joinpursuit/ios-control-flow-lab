@@ -33,6 +33,9 @@ print("D")
 - C
 - D
 
+```
+a,c,d
+```
 ***
 ## Question 2
 
@@ -55,7 +58,9 @@ switch appInfo {
 - Thanks for looking at myCoolApp!
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
-
+```
+myCoolApp hasn't released yet
+```
 ***
 ## Question 3
 
@@ -79,6 +84,9 @@ default:
 - B
 - C
 - D
+```
+D
+```
 
 ***
 ## Question 4
@@ -102,7 +110,10 @@ case "snickers":
 - No opening and closing brackets in each of the cases
 - No default case in the switch statement
 - No print statement right outside the switch statement
+````
+c
 
+`````
 ***
 ## Question 5
 
@@ -112,6 +123,19 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 let currentWeather = "rain"
 
 // enter code below
+```
+```
+let currentWeather = "rain"
+switch currentWeather {
+case "rain":
+    print("bring a raincoat")
+case "sunny":
+    print("it's a nice day")
+case "snowy":
+    print("bring a coat")
+default:
+    print("have a nice day")
+}
 ```
 
 ***
@@ -124,6 +148,10 @@ let firstName = "John"
 let lastName = "Appleseed"
 
 // enter code below
+```
+```
+let fullname = "\(firstName)" + " " + "\(lastName)"
+print(fullname)
 ```
 
 ***
@@ -144,7 +172,19 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+```
 
+ var temperatureInFahrenheit = 40
+
+switch temperatureInFahrenheit {
+case  1..<40:
+    print("it's really cold")
+case 85..<120:
+    print("it's really hot")
+default:
+    print("the weather is moderate")
+}
+```
 ***
 
 ## Question 8
@@ -158,6 +198,20 @@ if {
 else {
  print("You lose!")
 }
+```
+
+```
+
+var points = 100
+
+if points >= 50{
+ print("You win!")
+}
+else {
+ print("You lose!")
+}
+
+
 ```
 ***
 
@@ -185,6 +239,31 @@ Output:
 Error
 
 ```
+```
+var numberOfSides = 3
+
+switch numberOfSides {
+case 3:
+    print("triangle")
+case 4:
+    print("square")
+case 5:
+    print("pentagon")
+case 6:
+    print("hexagon")
+case 7:
+    print("heptagon")
+case 8:
+    print("octagon")
+case 9:
+    print("nonagon")
+case 10:
+    print("decagon")
+default:
+    print("out of range")
+}
+
+```
 ***
 
 ## Question 10
@@ -199,6 +278,25 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+```
+
+```
+var grade = 89
+
+switch grade {
+case 100 :
+    print("A+")
+case 90...99:
+    print("A")
+case 80...89:
+    print("B")
+case 70...79:
+    print("C")
+case 65...69:
+    print("D")
+default:
+    print("F")
+}
 ```
 ***
 
@@ -215,6 +313,22 @@ if firstName == "Peter" {
  let lastName = "Collins"
 }
 let fullName = firstName + " " + lastName
+```
+
+```
+
+var firstName = "Peter"
+var lastName = " "
+var fullName = " "
+if firstName == "Peter" {
+    lastName = "Gabriel"
+    fullName = firstName + " " + lastName
+    print(fullName)
+} else if firstName == "Phil" {
+    lastName = "Collins"
+    fullName = firstName + " " + lastName
+    print(fullName)
+}
 ```
 ***
 
