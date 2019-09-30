@@ -28,10 +28,10 @@ if conditionTwo {
 print("D")
 ```
 
-- A
+- A 
 - B
-- C
-- D
+- C (will print)
+- D (will print)
 
 ***
 ## Question 2
@@ -48,11 +48,12 @@ switch appInfo {
  default:
  print("I'm not quite sure what you are looking at")
 }
+
 ```
 
 - appInfo.0 hasn't released yet
-- myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
+- myCoolApp hasn't released yet (will print)
+- Thanks for looking at myCoolApp! (will print)
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
 
@@ -76,7 +77,7 @@ default:
 ```
 
 - A
-- B
+- B (will print)
 - C
 - D
 
@@ -100,7 +101,7 @@ case "snickers":
 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
-- No default case in the switch statement
+- No default case in the switch statement (answer)
 - No print statement right outside the switch statement
 
 ***
@@ -112,18 +113,43 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 let currentWeather = "rain"
 
 // enter code below
+Answer:
+
+let currentWeather = "rain"
+switch currentWeather {
+case "rain":
+ print("Better pack an umbrella")
+case "sunny":
+ print("Might wanna pack a pair of sunglasses")
+case snow:
+ print("Get ready to shovel")
+default:
+print("It's a beautiful day!")
+}
+
 ```
 
 ***
 ## Question 6
 
-Given the first name and last name of a Fellow, declare `fullName` variable and use string interpolation to concatenate the Fellow's full name and print to the console e.g The Fellow's full name is John Appleseed
+Given the first name and last name of a Fellow, declare `fullName` variable and use  f to concatenate the Fellow's full name and print to the console e.g The Fellow's full name is John Appleseed
 
 ```swift
 let firstName = "John"
 let lastName = "Appleseed"
 
 // enter code below
+```
+Answer:
+```
+swift
+
+let firstName = "John"
+let lastName = "Appleseed"
+let fullName = "John" + " Appleseed"
+print("Fellow's full name is \(fullName")
+
+
 ```
 
 ***
@@ -144,7 +170,22 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+Answer:
+```
+swift
 
+let temperatureInFarenheit = 85
+
+switch temperatureInFarenheit {
+case ...40 :
+    print("It's cold out")
+case 85... :
+    print("It's really warm")
+default:
+    print(" Weather is moderate")
+}
+
+```
 ***
 
 ## Question 8
@@ -156,6 +197,17 @@ if {
  print("You win!")
 } 
 else {
+ print("You lose!")
+}
+
+```
+Answer:
+```
+var score = 99
+if score >= 75 {
+ print("You win!")
+} 
+else {score < 75
  print("You lose!")
 }
 ```
@@ -185,6 +237,32 @@ Output:
 Error
 
 ```
+Answer:
+```
+var numberOfSides = 6
+switch numberOfSides {
+case 3 :
+print("triangle")
+case 4 :
+    print("quadrilateral")
+case 5 :
+    print("pentagon")
+case 6 :
+    print("hexagon")
+case 7:
+    print("septagon")
+case 8:
+    print("octagon")
+case 9:
+    print("nonagon")
+case 10:
+    print("decagon")
+    
+default:
+    print("Error")
+}
+
+```
 ***
 
 ## Question 10
@@ -199,6 +277,24 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+```
+Answer:
+```
+let numberGrade = 65
+switch numberGrade {
+case 100... :
+    print("A+")
+case 90...99 :
+    print("A")
+case 80...89 :
+    print("B")
+case 70...79 :
+    print("C")
+case 65...69 :
+    print("D")
+default :
+    print("F")
+}
 ```
 ***
 
