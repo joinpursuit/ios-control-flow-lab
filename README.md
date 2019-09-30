@@ -1,4 +1,4 @@
-# Control Flow Lab
+ls# Control Flow Lab
 
 ## Instructions for lab submission
 
@@ -323,8 +323,11 @@ if firstName == "Peter" {
 let fullName = firstName + " " + lastName
 ```
 Answer
-```swift
 ```
+Declaring "lastName" a second time in the if statement would not be allowed.
+```
+
+
 ***
 
 ## Question 12
@@ -334,6 +337,39 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 ```swift
 let nameAndBirthYear: (String, Int)
 
+```
+Answer
+```swift
+//Creating an if statement for this has confused me greatly, not sure what the error is. The switch statement was easier to approach.
+
+let nameAndBirthYear = ("Greg", 32)
+
+if nameAndBirthYear.1 < 30 {
+    if nameAndBirthYear.1 > 19 {
+        print("you are in your 20s") }
+    if nameAndBirthYear.1 < 40 {
+        if nameAndBirthYear.1 > 29 {
+        print("You are in your 30s") {
+                if nameAndBirthYear.1 < 50 {
+            if nameAndBirthYear.1 > 40 {
+                print("You are in your 40s") }
+                }
+            }
+        }
+    }
+}
+/*
+switch nameAndBirthYear {
+case (_, 20 ..< 30):
+    print("You are in your 20s")
+case (_, 30 ..< 40):
+    print("You are in your 30s")
+case (_, 40 ..< 50):
+    print("You are in your 40s")
+default:
+    print("You are too young/old for this switch")
+}
+*/
 ```
 ***
 
@@ -356,6 +392,7 @@ case 42:
  print("The answer to life, the universe and everything")
 default:
  print("Some uninteresting number")
+ }
 ```
 What happens when you change number to:
 
@@ -366,6 +403,17 @@ What happens when you change number to:
 -c. 65?
 
 What happens when you remove the default clause?
+
+Answer
+```
+a. 365 - Days in year
+
+b. Bytes in a kilobyte
+
+c. some uninteresting number
+
+No default- compile error, as switch cases need default to complete the block of code
+```
 
 ***
 
@@ -388,6 +436,29 @@ if population > 10000 {
  message = "\(population) is a large town"
 }
 ```
+Answer
+```swift
+var population: Int = 10002
+var message = String()
+/*
+if population > 10000 {
+    message = ("\(population) is a large town")
+} else if population > 5000 {
+message = ("\(population) is a mid-size town")
+}
+*/
+
+switch population {
+case 5001 ..< 10001:
+    print("This is a large town")
+case 1000 ..< 5000:
+    print("This is a mid-sized town")
+case 1 ..< 1000:
+    print("This is a mid-sized town")
+default:
+    print("This town ain't large enough for the two of us...")
+}
+```
 ***
 
 ## Question 15
@@ -400,5 +471,22 @@ b. Using a switch statement
 
 ```swift
 let myTuple: (Int, Int) = (5, 10)
+```
+Answer
+```swift
+let myTuple: (Int, Int) = (5, 9)
+
+if myTuple.0 + myTuple.1 > 14 {
+print("This tuple adds up to at least 15")
+} else {
+print("This tuple adds up to 15 or less")
+}
+
+switch myTuple.0 + myTuple.1 > 14 {
+case myTuple.0 + myTuple.1 < 15:
+print("This tuple adds up to at least 15")
+default:
+print("This tuple does not add to least 15, sorry.")
+}
 ```
 ***
