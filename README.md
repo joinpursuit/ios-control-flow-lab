@@ -305,6 +305,16 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 let nameAndBirthYear: (String, Int)
 
 nameAndBirthYear = ("Tsering", 1995)
+nameAndBirthYear.1
+nameAndBirthYear.0
+
+if nameAndBirthYear.1 == 1999 {
+    print("you are in your twenties")
+} else {
+    print("you are not in your twenties")
+
+
+nameAndBirthYear = ("Tsering", 1995)
 switch nameAndBirthYear {
 case (_, 1990...1999) :
     print("You are in your twenties.")
