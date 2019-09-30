@@ -29,7 +29,6 @@ print("D")
 ```
 
 - A
-- B
 - C
 - D
 
@@ -50,12 +49,9 @@ switch appInfo {
 }
 ```
 
-- appInfo.0 hasn't released yet
-- myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
-- I'm not quite sure what you are looking at
-- It will give a compile-time error
 
+- myCoolApp hasn't released yet
+-
 ***
 ## Question 3
 
@@ -75,9 +71,7 @@ default:
 }
 ```
 
-- A
-- B
-- C
+
 - D
 
 ***
@@ -98,10 +92,8 @@ case "snickers":
 }
 ```
 
-- No parentheses around the conditions
-- No opening and closing brackets in each of the cases
 - No default case in the switch statement
-- No print statement right outside the switch statement
+
 
 ***
 ## Question 5
@@ -113,7 +105,17 @@ let currentWeather = "rain"
 
 // enter code below
 ```
-
+let currentWeather = "rain"
+switch currentWeather {
+case "rain":
+   print(" Get an umbrella!")
+case "sunny":
+    print("Get sunblock its Sunny")
+case "snow":
+    print("Prepare for the cold! get your scarf it will snow!")
+default:
+    print("Just a regular day")
+}
 ***
 ## Question 6
 
@@ -125,7 +127,11 @@ let lastName = "Appleseed"
 
 // enter code below
 ```
+let firstName = "John"
+let lastName = "Appleseed"
 
+var fullName = firstName + " " + lastName
+print("The fellow's full name is \(fullName)")
 ***
 
 ## Question 7
@@ -144,6 +150,15 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+let temperatureInFahrenheit = 77
+switch temperatureInFahrenheit {
+case ...40:
+ print("It's cold out.")
+case 85...:
+ print("It's really warm.")
+default:
+ print("Weather is moderate.")
+}
 
 ***
 
@@ -159,6 +174,22 @@ else {
  print("You lose!")
 }
 ```
+
+var MyNumber = 9
+if MyNumber == 9 {
+ print("You win!")
+} else {
+ print("You lose!")
+}
+let temperatureInFahrenheit = 77
+switch temperatureInFahrenheit {
+case ...40:
+ print("It's cold out.")
+case 85...:
+ print("It's really warm.")
+default:
+ print("Weather is moderate.")
+}
 ***
 
 ## Question 9
@@ -185,6 +216,25 @@ Output:
 Error
 
 ```
+var numberOfSides = 10
+switch numberOfSides {
+case 3:
+    print("Its a Triangle")
+case 4:
+    print("It can be a square or retangle")
+case 5:
+    print("Its a pentagon")
+case 6:
+    print("Its a polygon")
+case 7:
+    print("Its a heptagon!")
+case 8:
+    print("Its an octagon!!")
+case 9:
+    print("Its an nonagon!")
+default:
+    print("Error message: Out of Range!")
+}
 ***
 
 ## Question 10
