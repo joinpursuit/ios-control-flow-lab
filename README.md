@@ -27,7 +27,7 @@ if conditionTwo {
 }
 print("D")
 ```
-
+// a,c,d
 - A
 - B
 - C
@@ -49,6 +49,7 @@ switch appInfo {
  print("I'm not quite sure what you are looking at")
 }
 ```
+answer   appInfo.0 hasent released yet 
 
 - appInfo.0 hasn't released yet
 - myCoolApp hasn't released yet
@@ -75,6 +76,12 @@ default:
 }
 ```
 
+answer print d 
+case one  would print 1,2,3 but not 4 
+case b prints 5-9  not 10 
+case double is not declared correctly
+default means print 
+
 - A
 - B
 - C
@@ -97,7 +104,9 @@ case "snickers":
  print("Hungry? Grab a Snickers")
 }
 ```
-
+ answer 
+ - No default case in the switch statement
+ 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
 - No default case in the switch statement
@@ -113,6 +122,17 @@ let currentWeather = "rain"
 
 // enter code below
 ```
+let currentWeather = "rain"
+switch currentWeather {
+case "rain":
+    print("damnnnnnnn")
+case "snow":
+    print("🌨")
+case "sunny":
+    print("☀️")
+default:
+    print("whats going on ")
+
 
 ***
 ## Question 6
@@ -123,8 +143,13 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 let firstName = "John"
 let lastName = "Appleseed"
 
+
 // enter code below
 ```
+let firstName = "John"
+let lastName = "Appleseed"
+let fullName = "john"+" "+"appleseed" // or you can just write let fullName = "john"+" appleseed"
+print("fellows full name \(fullName)")
 
 ***
 
@@ -144,6 +169,17 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+let temperatureInFahrenheit = 85
+    switch temperatureInFahrenheit {
+    case ...40 :
+        print("it's cold out.")
+    case 85... :
+        print("It's really warm.")
+        
+    default:
+        print("weather is moderate")
+}
+
 
 ***
 
@@ -159,6 +195,16 @@ else {
  print("You lose!")
 }
 ```
+var love = 2
+
+if love >= 2 {
+ print("You win!")
+}
+else { love < 2
+ print("You lose!")
+}
+
+
 ***
 
 ## Question 9
@@ -185,6 +231,29 @@ Output:
 Error
 
 ```
+var numberOfSides = 6
+
+switch numberOfSides {
+case 3:
+    print("triangle")
+case 4:
+    print("square")
+case 5:
+    print("pentagon")
+case 6:
+    print("hexagon")
+case 7:
+    print("heptagon")
+case 8:
+    print("octagon")
+case 9:
+    print("nonagon")
+case 10:
+    print("decagon")
+default:
+        print("error")
+}
+
 ***
 
 ## Question 10
@@ -200,6 +269,22 @@ Numeric Score 	Letter Grade
 65 - 69 	D
 Below 65 	F
 ```
+
+let numberGrade = 65
+switch numberGrade {
+case 100...:
+    print("A+")
+case 90...99:
+    print("A")
+case 80...89:
+    print("B")
+case 70...79:
+    print("c")
+case 65...69:
+    print("D")
+default:
+    print("F")
+}
 ***
 
 ## Question 11
