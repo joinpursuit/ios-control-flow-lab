@@ -379,7 +379,7 @@ message = "It's a mid-size town"
 }
 
 c) switch population 
-case 10000: 
+case 10000...: 
 print("\(population)its a large town")
 case 5000..<10000 =:
 print("\(population) it's a mid-size town)"
