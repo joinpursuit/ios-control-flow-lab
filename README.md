@@ -28,11 +28,12 @@ if conditionTwo {
 print("D")
 ```
 ```
+Answer:
+A.
+C.
+D.
 
-- A
-- B
-- C
-- D
+
 ```
 
 ***
@@ -52,11 +53,8 @@ switch appInfo {
 }
 ```
 ```
-- appInfo.0 hasn't released yet
-- myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
-- I'm not quite sure what you are looking at
-- It will give a compile-time error
+Answer:
+"myCoolApp hasn't rreleased yet"
 ```
 ***
 ## Question 3
@@ -77,10 +75,8 @@ default:
 }
 ```
 ```
-- A
-- B
-- C
-- D
+Answer:
+D
 ```
 ***
 ## Question 4
@@ -100,10 +96,9 @@ case "snickers":
 }
 ```
 ```
-- No parentheses around the conditions
-- No opening and closing brackets in each of the cases
+Answer:
 - No default case in the switch statement
-- No print statement right outside the switch statement
+
 ```
 ***
 ## Question 5
@@ -147,6 +142,7 @@ let firstName = "John"
 let lastName = "Appleseed"
 
 let fullName = ("\(firstName) \(lastName)")
+print("The fellow's name is \(fullName)")
 ```
 ***
 
@@ -241,7 +237,7 @@ var numberOfSides = 3
 
 switch numberOfSides {
 case 3:
-    print( "triangle")
+    print("triangle")
 case 4:
     print("square or rectangle")
 case 5:
@@ -316,6 +312,18 @@ if firstName == "Peter" {
 }
 let fullName = firstName + " " + lastName
 ```
+```
+switch firstName {
+case "Peter":
+    print("\(firstName) Gabriel")
+case "Phil"
+    print("\(firstName) Collins")
+default:
+    print("Print either Peter or Phil")
+}
+```
+
+
 ***
 
 ## Question 12
@@ -343,7 +351,7 @@ if year < 1999 {
     print("\(name) is in retirement")
 }
  
-switch year{
+switch year {
 case 2000...:
     print("\(name) is in their teens")
 case 1991...1999:
@@ -460,4 +468,14 @@ b. Using a switch statement
 ```swift
 let myTuple: (Int, Int) = (5, 10)
 ```
+Answer:
+
+let myTuple: (Int, Int) = (5, 10)
+
+if myTuple.0 + myTuple.1 >= 15 {
+    print("The sum is at least 15")
+} else {
+    print("The sum is not at least 15")
+}
+
 ***
