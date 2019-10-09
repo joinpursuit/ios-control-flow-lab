@@ -27,11 +27,14 @@ if conditionTwo {
 }
 print("D")
 ```
+```
+Answer:
+A.
+C.
+D.
 
-- A
-- B
-- C
-- D
+
+```
 
 ***
 ## Question 2
@@ -49,13 +52,10 @@ switch appInfo {
  print("I'm not quite sure what you are looking at")
 }
 ```
-
-- appInfo.0 hasn't released yet
-- myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
-- I'm not quite sure what you are looking at
-- It will give a compile-time error
-
+```
+Answer:
+"myCoolApp hasn't rreleased yet"
+```
 ***
 ## Question 3
 
@@ -74,12 +74,10 @@ default:
  print("D")
 }
 ```
-
-- A
-- B
-- C
-- D
-
+```
+Answer:
+D
+```
 ***
 ## Question 4
 
@@ -97,12 +95,11 @@ case "snickers":
  print("Hungry? Grab a Snickers")
 }
 ```
-
-- No parentheses around the conditions
-- No opening and closing brackets in each of the cases
+```
+Answer:
 - No default case in the switch statement
-- No print statement right outside the switch statement
 
+```
 ***
 ## Question 5
 
@@ -112,6 +109,20 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 let currentWeather = "rain"
 
 // enter code below
+```
+```
+Answer:
+var currentWeather = "rain"
+
+switch currentWeather {
+case "rain":
+    print("Bring Umbrella")
+case "sunny":
+    print("Apply Sunscreen")
+case "snow":
+    print("Wear your boot")
+default:
+    print ("Try again")
 ```
 
 ***
@@ -125,7 +136,14 @@ let lastName = "Appleseed"
 
 // enter code below
 ```
+```
+Answer:
+let firstName = "John"
+let lastName = "Appleseed"
 
+let fullName = ("\(firstName) \(lastName)")
+print("The fellow's name is \(fullName)")
+```
 ***
 
 ## Question 7
@@ -144,6 +162,19 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+```
+Answer:
+var temperatureInFahrenheit = 50
+
+switch temperatureInFahrenheit {
+case ...40 :
+    print ("It's cold out.")
+case 85... :
+    print ("It's really warm.")
+default:
+    print("Waeather is moderate.")
+}
+```
 
 ***
 
@@ -159,6 +190,20 @@ else {
  print("You lose!")
 }
 ```
+```
+Answer:
+
+let number = 1
+
+if number == 1 {
+ print("You win!")
+}
+else {
+ print("You lose!")
+}
+```
+
+
 ***
 
 ## Question 9
@@ -185,6 +230,34 @@ Output:
 Error
 
 ```
+```
+Answer:
+
+var numberOfSides = 3
+
+switch numberOfSides {
+case 3:
+    print("triangle")
+case 4:
+    print("square or rectangle")
+case 5:
+    print("pentagon")
+case 6:
+    print("hexagon")
+case 7:
+    print("heptagon")
+case 8:
+    print("octagon")
+case 9:
+    print("nonagon")
+case 10:
+    print("decagon")
+default:
+print("error: out of range")
+
+}
+
+```
 ***
 
 ## Question 10
@@ -200,6 +273,29 @@ Numeric Score 	Letter Grade
 65 - 69 	D
 Below 65 	F
 ```
+Answer:
+```
+let numberGrade = 80
+
+switch numberGrade {
+case 0...65:
+    print("F")
+case 65...69:
+    print("D")
+case 70...79:
+    print("C")
+case 80...89:
+    print("B")
+case 90...99:
+    print("A")
+case 100:
+    print("A+")
+default:
+    print("Enter an appropriate grade")
+
+}
+```
+
 ***
 
 ## Question 11
@@ -216,6 +312,18 @@ if firstName == "Peter" {
 }
 let fullName = firstName + " " + lastName
 ```
+```
+switch firstName {
+case "Peter":
+    print("\(firstName) Gabriel")
+case "Phil"
+    print("\(firstName) Collins")
+default:
+    print("Print either Peter or Phil")
+}
+```
+
+
 ***
 
 ## Question 12
@@ -226,6 +334,41 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 let nameAndBirthYear: (String, Int)
 
 ```
+Answer:
+```
+let name = "David"
+let year = 1995
+ 
+if year < 1999 {
+    print("\(name) is in their teens")
+} else if year >= 1998 && year < 1990 {
+    print("\(name) is in their twenties")
+} else if year >= 1990 && year < 1980 {
+    print("\(name) is in their thirties")
+} else if year >= 1980 && year < 1970 {
+    print("(name) is in their fourties")
+} else{
+    print("\(name) is in retirement")
+}
+ 
+switch year {
+case 2000...:
+    print("\(name) is in their teens")
+case 1991...1999:
+    print("\(name) is in their twenties")
+case 1989...1990:
+    print("\(name) is in their thirties")
+case 1979...1980:
+    print("\(name) is in their forties")
+case 1969...1970:
+    print("\(name) is in their fifties")
+default:
+    print("\(name) you are old")
+}
+```
+
+
+
 ***
 
 
@@ -260,6 +403,14 @@ What happens when you remove the default clause?
 
 ***
 
+Answer:
+```
+The first case will print "The answer to life, the universe and everything'
+a. "Days of the year"
+b. "Bytes in a Kilobyte"
+c. "Some unintersting number"
+```
+
 
 ## Question 14
 
@@ -279,6 +430,31 @@ if population > 10000 {
  message = "\(population) is a large town"
 }
 ```
+Answer:
+```
+var population: Int = 4000
+
+if population > 10000 {
+    print("\(population) is a large town")
+} else if population < 10000 && population > 5000 {
+    print("\(population) is a medium size town")
+} else {
+    print("It's a mid-sized town")
+}
+```
+```
+Switch statement:
+
+switch population {
+case 10000...:
+    print("\(population) is a large town")
+case 5000..<10000:
+    print("\(population) is a medium size town")
+default:
+    print("\(population) is a mid-sized town")
+}
+```
+
 ***
 
 ## Question 15
@@ -292,4 +468,14 @@ b. Using a switch statement
 ```swift
 let myTuple: (Int, Int) = (5, 10)
 ```
+Answer:
+
+let myTuple: (Int, Int) = (5, 10)
+
+if myTuple.0 + myTuple.1 >= 15 {
+    print("The sum is at least 15")
+} else {
+    print("The sum is not at least 15")
+}
+
 ***
