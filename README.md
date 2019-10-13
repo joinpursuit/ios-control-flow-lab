@@ -283,6 +283,15 @@ if firstName == "Peter" {
 let fullName = firstName + " " + lastName
 ```
 ***
+let firstName = "Peter"
+var lastName = "noName"
+if firstName == "Peter" {
+    lastName = "Gabriel"
+} else if firstName == "Phil" {
+    lastName = "Collins"
+}
+let fullName = firstName + " " + lastName
+
 
 ## Question 12
 
@@ -292,6 +301,35 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 let nameAndBirthYear: (String, Int)
 
 ```
+let nameAndBirthYear: (String, Int) = ("", 10 )
+var birthYear = nameAndBirthYear.1
+
+if 10 <= birthYear && birthYear < 20 {
+    print("You are a teenager")
+}
+if 20 <= birthYear && birthYear < 30 {
+    print("You are in your twenties") // 20s
+}
+if 30 <= birthYear && birthYear < 40 {
+    print("You are in your thirties") // 30s
+}
+if 40 <= birthYear && birthYear < 50 {
+    print("Wow you are still alive!") // 40s
+}
+ switch birthYear {
+        case (birthYear...10):
+                print("You are a child")
+            case (birthYear...20):
+                print("you are in your Twenties")
+            case (birthYear...30) :
+                print("You are in your 30's")
+            default:
+                print("Wow you are alive")
+            }
+
+
+
+
 ***
 
 
@@ -317,13 +355,15 @@ default:
 What happens when you change number to:
 
 -a. 365?
+prints Days in year
 
 -b. 1024?
+prints ("Bytes in a Kilobyte")
 
 -c. 65?
-
+ print("Some uninteresting number")
 What happens when you remove the default clause?
-
+will not compile
 ***
 
 
@@ -345,6 +385,25 @@ if population > 10000 {
  message = "\(population) is a large town"
 }
 ```
+var population: Int = 10000
+var message = String()
+
+if population > 10000 {
+    message = "\(population) is a large town"
+} else if population < 10_000 && population > 5_000 {
+    print("Its a medium size town")
+} else {
+    print("It's a mid-size town")
+}
+
+switch population {
+case ...9999:
+    message = "\(population) is a large town"
+case 4999...9999:
+    message = "a medium size town"
+default:
+    message = "it's a mid-size town"
+}
 ***
 
 ## Question 15
@@ -356,6 +415,13 @@ a. Using a conditional
 b. Using a switch statement
 
 ```swift
-let myTuple: (Int, Int) = (5, 10)
+
 ```
+let myTuple: (Int, Int) = (5, 10)
+var sum = myTuple.0 + myTuple.1
+if sum <= 15 {
+    print(sum)
+} else {
+    print()
+}
 ***
