@@ -112,7 +112,7 @@ case "rain":
 case "sunny":
     print("Get sunblock its Sunny")
 case "snow":
-    print("Prepare for the cold! get your scarf it will snow!")
+    print("Prepare for the cold! brrrr!")
 default:
     print("Just a regular day")
 }
